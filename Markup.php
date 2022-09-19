@@ -126,83 +126,10 @@
 	</div>
 </table>
 <button type="button" onclick="resetHope();EnDisM();HopeCheck();TestRest()" style="margin-bottom:12%">reset</button> 
-
-<!-- The blow is a quick mockup of THAT. Probably put in a different page on other to continue work-->
-<table><tr><td>BarBaRa</td></tr>
-	<tr><td><button id="e" type ="button" onclick="dV(); EM()" > -1 </td>
-		<td><button id="tart"type="button" onclick="RTD()"style="margin-left:-130px"> ROLL THE DICE </td>
-		<td><button type ="button" onclick="iV(); EM()"style="margin-left:-50px"> +1 <td></tr>
-	<tr><td><form><input type="range" class="Slide" id="val" value="1" disabled /> </td></tr>
-	<tr><td><form><input type="text" id="bbr" value="1" readonly /></form></td>
-<td id="lol" style="margin-left:-110px">Pongos</td></tr>
-<td hidden><button id="tt" hidden type="button" value="0"/></td>
-</table>
 <table><tr><td> Rerolls: </td><td id ="falsify">0
 </td></tr>
 <tr><td id="john"></td></tr></table>
-<script>
-var testInput = document.getElementsByClassName('Slide')[0];
-var tart = document.getElementById('tart');
-var br = document.getElementById('bbr');
-testInput.min = 100;
-testInput.max = 600;
-tart.addEventListener('click', uv, false);
-function uv() {
-    currValue = +testInput.value;
-    window.requestAnimationFrame(animateH);
-}
-function animateH() {
-    testInput.value = currValue;
-    if((testInput.value < 200) && (br.value > 2)){
-      window.requestAnimationFrame(animateH);   
-    } 
-    if (testInput.value < 108){currValue = currValue + 0.1;}
-	else if (testInput.value < 120){currValue = currValue + 1.5;}
-	else if (testInput.value < 200) {currValue = 200}
-}
-function RTD(){
-var T = ((parseInt(document.getElementById('val').value, 10) /100 )-1);
-var J = parseInt(document.getElementById('tt').value, 10);
-var X = (1 + (J * 0.4));
-for (let i = 0; i < (X); i++) {
-	var c = Math.floor ((Math.random()) * (Rolls[T].length));
-	var numb = (br.value * Rolls[T][c]);
-	numb = numb.toFixed(2);
-	br.value = numb;
-	document.getElementById('tt').value = (J + 1);
-}
-if (T === 5){document.getElementById("tt").value = (J + 15)}}
-const Rolls =[];
-	Rolls[0] = ["1.005","1.01", "1.015","1.02","1.025"];
-	Rolls[1] = ["1.1", "1.15","1.2", "1.125","1.175"];
-	Rolls[2] = ["1.5", "1.75", "2", "2.5", "3.0", "7.5"];
-	Rolls[3] = ["20", "50"];
-	Rolls[4] = ["150", "250"];
-	Rolls[5] = ["500", "750"];
-	Rolls[6] = ["2000", "5000"];
-function iV()
-	{
-		var value = parseInt(document.getElementById('val').value, 10);
-		value = isNaN(value) ? 0 : value;
-		value+= 100;
-		document.getElementById('val').value = value;
-		document.getElementById('tt').value = "0";
-	}
-function dV()
-	{
-		var value = parseInt(document.getElementById('val').value, 10);
-		value = isNaN(value) ? 0 : value;
-		value-= 100;
-		document.getElementById('val').value = value;
-	}
-function EM()
-	{
-		var button = document.getElementById('e');
-		if ((parseInt(document.getElementById('val').value, 10) > "0")) {
-			button.disabled = false;
-		} else {button.disabled = true;}
-	}
-	</script>
+
 <table class="Result" id="Rolls">
 	<tr><td id="r1"/><td id="r2"/><td id="r3"/><td id="r4"/><td id="r5"/><td id="r6"/></tr>
 	<tr><td id="r7"/><td id="r8"/><td id="r9"/><td id="r10"/><td id="r11"/><td id="r12"/></tr>
