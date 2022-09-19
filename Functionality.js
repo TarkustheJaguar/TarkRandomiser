@@ -164,7 +164,7 @@ function HopeCheck() {
 			if ((index3 !== -1) && ((DD!="Reserve Op: Melee")&&(DD!="Reserve Op: Ranged")&&(DD!="Reserve Medic"))&&(Q === (All))){
 					(are)[xt].splice(index3, 1);
 					}
-		return 'Results: ' + DD;
+		return 'Result: ' + DD;
 		}			
 const Defender = [];
 const Guard = [];
