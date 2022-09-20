@@ -1,5 +1,41 @@
 <style>
 .Table2 {}
+body{
+	background-color:lightgrey;
+}
+#ISYAY{
+	display: inline-block;
+	padding-top: 1%;
+	margin-top:0%;
+	width:15%;
+	font-size:100%;
+	position: absolute;
+	height: 60%;
+	background-image:url("Sharp.webp")!important;
+	background-position: center 250% !important;
+	background-position: padding-top:10px;
+	background-size: 170% !important;
+	background-repeat: no-repeat !important;
+	background-color: grey;
+}
+#ISYAY tr{
+	margin:0;
+	width:100%;
+	background-color:darkgrey;
+	text-align:center;
+}
+#ISYAY tr:nth-child(5) td{
+	position:absolute;
+	width:96%;
+	padding:0;
+	bottom:0;
+	text-align:center;
+	line-height:200%;
+	height:10%;
+	border-color:black;
+	border-style:solid;
+	background-color:darkgrey;
+}
 .Table2 td {
 	color: maroon;
 	background-color: ghostwhite;
@@ -16,7 +52,8 @@
 	background-color: ghostwhite;
 	border-color: black;
 	border-style: solid;
-	padding:8px;
+	padding:4%;
+	height:100%;
 	text-align: center;
 	border-radius: 10px;
 	font-size:24px;
@@ -31,14 +68,16 @@
 .Table2 {
 	table-layout: auto;
 	width:40%;
+	height:60%;
 	border-radius: 5px;
 	text-align: center;
 	margin-right:5%;
-	margin-left:5%;
+	margin-left:20%;
 	border-color: black;
 	border-style: solid;
 	background-color: lightslategray;
 	float: left;
+position:absolute;
 }
 .Table2 tr:nth-child(5) td button {
 	background-color: red;
@@ -51,32 +90,43 @@
 	border: none;
 }
 .Table2 tr:nth-child(4) td {
-	padding:1.5%;
+	height: 100%;
 	font-size: 40px;
 	padding-left: 22%;
 	text-align: left;
 }
 .CIA tr:nth-child(4) td{
-	padding: 0%;
+	padding: 0% !important;
+	font-size: 24px;
+}
+.CIA tr:nth-child(4) td button{
+	padding:4%;
 }
 .CIA tr:nth-child(5) td{
 	background-color: ghostwhite;
 	border-color: black;
 	border-style: solid;
 	border-radius: 10px;
-	width:50%;
+	width:0%;
 }
 .CIA tr:nth-child(5) td button{
 	color: maroon;
 	background-color: ghostwhite;
 	border-color: black;
 	border-style: solid;
-	padding:8px;
+	padding:4%;
 	margin: inherit;
 	text-align: center;
 	border-radius: 10px;
 	font-size:24px;
 	width:100%;
+}
+.CIA tr:nth-child(6) td button{
+	padding: 2% !important;
+}
+#Jarg{
+	margin-left:70%;
+
 }
 #john {
 	position:absolute;
@@ -85,7 +135,7 @@
 .Result {
 	clear: both;
 	margin-left: 5%;
-	margin-top: 3%;
+	margin-top: 5%;
 	float: left;
 	table-layout: fixed;
 	width:70%;
@@ -99,11 +149,14 @@
 	vertical-align:top;
 }
 #hopetable {
-	width: 12%;
-	margin-left:1%;
-	margin-right:1%;
+	width: 15%;
+	margin-left:0%;
+	margin-right:0%;
+	height:55%;
 	display: inline-block;
-	padding-top: 10%;
+	padding:0px;
+	margin:0%;
+	padding-top: 14%;
 	float: left;
 	border-style: solid;
 	border-width: 3px;
@@ -241,31 +294,31 @@
 By assigning the consistent styling to the ID instead of class, you minimise duplication*/
 .Hope0 {
 	background-image: linear-gradient(to bottom, 
-		black 15%,darkred 39%, brown 42%, black 50%);
+		black 29%,darkred 39%, brown 42%, black 50%);
 }
 .Hope1 {
 	background-image: linear-gradient(to bottom, 
-		black 15%, #191946 29%, firebrick 39%, darkred 42%, maroon 45%, black 60%);
+		black 15%, #191946 29%, darkred 39%, brown 42%, black 60%);
 }
 .Hope2 {
 	background-image: linear-gradient(to bottom, 
-		midnightblue 13%, steelblue 29%, skyblue 31%, white 31.5%, lightyellow 32%, yellow 33%, gold 33.5%, goldenrod 35%, peru 36%, darkred 38%, brown 47%, black 65%);
+		midnightblue 13%, steelblue 29%, skyblue 31%, white 31.5%, lightyellow 32%, yellow 33%, peru 36%, darkred 39%, brown 42%, black 65%);
 }
 .Hope3 {
 	background-image: linear-gradient(to bottom, 
-		steelblue 5%, skyblue 20%, white 25%, lightyellow 30%, yellow 32%, gold 34%, goldenrod 36%, darkgoldenrod 40%, indianred 44%, brown 56%, black 60%);
+		steelblue 5%, skyblue 20%, white 25%, lightyellow 30%, yellow 32%, gold 34%, goldenrod 36%, darkgoldenrod 40%, indianred 44%, brown 60%, black 60%);
 }
 .Hope4 {
 	background-image: linear-gradient(to bottom, 
-		steelblue 1%, skyblue 5%, white 25%, lightyellow 30%, yellow 40%, gold 44%, goldenrod 47%, indianred 49%, brown 64%, black 70%);
+		steelblue 1%, skyblue 5%, white 25%, lightyellow 30%, yellow 40%, gold 44%, goldenrod 47%, indianred 60%, brown 64%, black 78%);
 }
 .Hope5 {
 	background-image: linear-gradient(to bottom, 
-		skyblue 7%, white 35%, lightyellow 42%, yellow 47%,gold 50%, goldenrod 54%, lightpink 60%, brown 74%, black 86%);
+		skyblue 7%, white 35%, lightyellow 42%, yellow 47%,gold 50%, goldenrod 54%, lightpink 60%, brown 79%, black 96%);
 }
 .Hope6 {
 	background-image: linear-gradient(to bottom, 
-		skyblue 5%, white 33%, lightyellow 52%, yellow 56%, goldenrod 60%, lightpink 73%, brown 90%, black 92%);
+		skyblue 5%, white 33%, lightyellow 52%, yellow 56%, goldenrod 60%, lightpink 73%, brown 95%, black 99%);
 }
 .Hope7 {
 	background-image: linear-gradient(to bottom,
@@ -278,5 +331,33 @@ By assigning the consistent styling to the ID instead of class, you minimise dup
 .Hope9 {
 	background-image: linear-gradient(to bottom,
 		lightskyblue 1%, white 15%, white 53%, lightyellow 73%, lightpink 92%, pink 99%, brown 99.5%);
+}
+.Hope10 {
+	background-image: linear-gradient(to bottom,
+		lavender 1%,  white 11%, white 53%, lightyellow 83%, lightpink 97%, pink 99.5%, brown 99.9%);
+}
+.cycle {
+	margin-bottom:40%;
+}
+.cycle td {
+	float:left;
+	width:15%;
+	margin-top:-15%;
+	padding:15px;
+	table-layout:auto;
+}
+.cycle td button{
+	float:left;
+	color: maroon;
+	padding-left: 15px;
+	padding-right: 15px;
+	background-color: transparent;
+	border-color: black;
+	border-style: solid;
+	background-color:lightblue;
+	text-align: center;
+	border-radius: 10px;
+	font-size:14px;
+	width:200%;
 }
 </style>
