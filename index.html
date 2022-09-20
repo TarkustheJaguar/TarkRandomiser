@@ -14,12 +14,19 @@
 		</tr>
 	</table> <br>
 <table class="main">
-	<table class="Hope6" id="hopetable">
+	<table class="Hope6" id="hopetable" style="display:none">
 		<tr><td colspan="2">Hope</td></tr>
         <tr><td colspan="2" id="hope"><div id="Hope"><form><input type="text" id="number" value="6" readonly /></form></td></tr>
 		<tr><td><button id="minus" type="button" onclick="decrementValue();EnDisM();HopeCheck()">-1</button></td>
 			<td><button id="plus" type="button" onclick="incrementValue();EnDisM();HopeCheck()">+1</button></td></tr>
     </table>
+	<table id="ISYAY">
+	<tr><td/></tr>
+	<tr><td colspan="2">INTEGRATED STRATEGIES</td></tr>
+        <tr><td colspan="2"></td></tr>
+		<tr><td></td></tr>
+		<tr><td>DISABLED</td></tr>
+	</table>
 	<div id="Back">
 		<table class="Table2 CIA">
 			<tr><th colspan="2"> Operators </th></tr>
@@ -125,10 +132,18 @@
 		</table>
 	</div>
 </table>
-<button type="button" onclick="resetHope();EnDisM();HopeCheck();TestRest()" style="margin-bottom:12%">reset</button> 
+<div id="Jarg">
+<button type="button" onclick="resetHope();EnDisM();HopeCheck();TestRest();ResetAB()" style="margin-bottom:12%">reset</button> 
+<button type="button" onclick="AddIS()" id="jeg">Enable IS</button>
+<table class="cycle"><tr><td><button type="button" onclick="HopeCycle()">6*</button></td>
+<td><button type="button" onclick="HopeCycle()">5*</button></td></tr>
+<tr><td><button type="button" onclick="HopeCycle()">4*</button></td>
+<td><button type="button" onclick="HopeCycle()">3*</button></td></tr>
+</table>
 <table><tr><td> Rerolls: </td><td id ="falsify">0
 </td></tr>
 <tr><td id="john"></td></tr></table>
+</div>
 <table class="Result" id="Rolls">
 	<tr><td id="r1"/><td id="r2"/><td id="r3"/><td id="r4"/><td id="r5"/><td id="r6"/></tr>
 	<tr><td id="r7"/><td id="r8"/><td id="r9"/><td id="r10"/><td id="r11"/><td id="r12"/></tr>
