@@ -34,12 +34,7 @@ function ToggleTest2(){
 }
 // Causes the 'Back' button to reset locked buttons, and rolled result
 function disB() {
-	var f = (((((event.target).parentElement).parentElement).nextElementSibling).firstChild).nextElementSibling.firstChild;
-		f.disabled = true;
-		f.innerText = ' a ';
-		f.className = "LockButtonRESET";
 	var c = (((((event.target).parentElement).parentElement).nextElementSibling).firstChild).firstChild;
-		c.disabled = false;
 		c.innerText = 'Roll';
 		c.className = "blank";
 	var d = (((((event.target).parentElement).parentElement).nextElementSibling).nextElementSibling).firstChild;
@@ -51,39 +46,21 @@ function disB() {
 		var show = 5;
 function disRB() {
     var x = event.target;
-        x.disabled = true;
-        x.innerText = ' a '
-		x.className = "LockButtonRESET";
-	var y = (((((event.target).parentElement).previousElementSibling).firstChild));
-        y.disabled = false;
-        y.innerText = 'Roll'
-		y.className = "blank";
+        if(x.innerHTML != "Roll"){
 	var z = (((((event.target).parentElement).parentElement).nextElementSibling).firstChild);
 	var g = document.getElementById('john');
 	var c = parseInt(document.getElementById('falsify').innerText);
 	var st = z.innerHTML.split(': ')[1];
-	if ((g.innerText === "") && (z.innerText != "Out of Operators!")){arr.push(st);
-			g.innerText = (arr);}
-	else if ((c < show) && (z.innerText != "Out of Operators!")) {arr.push(st);
+	if ((c < show) && (z.innerText != "Out of Operators!")) {arr.push(st);
 			g.innerText = (arr.join('\n'));}
-	z.className = 'blank';
 	if (z.innerText != "Out of Operators!"){
 	document.getElementById('falsify').innerText = (c)+1;}
 	if ((c >= show) && (z.innerText != "Out of Operators!")) {arr.push(st);
 		arr.shift();
 		g.innerText = (arr.join('\n'))}
-	z.innerHTML = ' <br> ';
+		}
+	x.innerText = 'Reroll...'
     }
-function EnRB() {
-	var y = (((((event.target).parentElement).nextElementSibling).firstChild));
-		y.disabled = false;
-		y.innerText = 'Reset?'
-		y.className = "blank";
-	var x = event.target;
-		x.disabled = true;
-		x.innerText = 'Roll...';
-		x.className = "LockButton";
-}
 //This is my array for 'Hope' Background change!! FULLY OPERATIONAL
 function HopeCheck() {
 	var a = parseInt(document.getElementById('number').value, 10);
@@ -228,6 +205,7 @@ function TestRest(){
 }
 function accept(){
 	var toast = (((((event.target.parentElement).parentElement).previousElementSibling).firstChild));
+	var toast3 = (((((event.target.parentElement).parentElement).previousElementSibling).previousElementSibling.firstChild).firstChild);
 	var toast2 = (((((event.target.parentElement).parentElement).previousElementSibling).firstChild).innerHTML);
 	var success = toast2.split(': ')[1];
 		if (success != undefined){
@@ -240,19 +218,12 @@ function accept(){
 			}
 			toast.innerHTML = " <br> ";
 			toast.className = "";
+			toast3.innerText = "Roll";
 		var crc = (((((event.target.parentElement).parentElement).previousElementSibling).previousElementSibling));
-		var og = (crc.firstChild).firstChild;
-		var pog = (crc.firstChild).nextElementSibling.firstChild;
-			og.disabled = false;
-			og.innerText = "Roll";
-			og.className = "";
-			pog.disabled = true;
-			pog.className = "LockButtonRESET";
 	}
 }
 var CN = 1;
 var RR = "r1";
-
 function ResetAB() {
 	CN = 1;
 	RR = "r1";
@@ -327,3 +298,6 @@ function HopeCycle(){
 //Added ResetAB() - which removes stored results and resets to zero. Added to reset button.
 //ResetAB() also resets reroll result array, and incremented number.
 //Added HopeCycle() to directly set rarity. Very WIP styling. Eventually hide all the default IS hope stuff.
+//Cleaned up a lot of the CSS overlap and errors
+//Simplified reroll process to be more efficient
+//Fixed SOME of the issues with regards to other resolutions
