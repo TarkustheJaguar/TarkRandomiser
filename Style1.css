@@ -44,8 +44,11 @@ body{
 	padding:0px;
 	text-align: center;
 	border-radius: 10px;
-	font-size:28px;
+	height: auto;
 	width:50%;
+}
+.Table4 tr:nth-child(4) td{
+	padding:4%;
 }
 .Table2 td button {
 	color: maroon;
@@ -77,52 +80,28 @@ body{
 	border-style: solid;
 	background-color: lightslategray;
 	float: left;
-position:absolute;
+	position:absolute;
 }
-.Table2 tr:nth-child(5) td button {
+.Table4 tr:nth-child(5) td button {
 	background-color: red;
-	margin-left: 25%;
+	margin-left: auto;
 	margin-right: auto;
-	width: 150%;
+	width: 100%;
 }
-.Table2 tr:nth-child(5) td {
+.Table4 tr:nth-child(5) td {
 	background-color: inherit;
 	border: none;
 }
-.Table2 tr:nth-child(4) td {
-	height: 100%;
+.Table4 tr:nth-child(4) td {
 	font-size: 40px;
 	padding-left: 22%;
 	text-align: left;
 }
-.CIA tr:nth-child(4) td{
-	padding: 0% !important;
-	font-size: 24px;
-}
-.CIA tr:nth-child(4) td button{
-	padding:4%;
-}
-.CIA tr:nth-child(5) td{
-	background-color: ghostwhite;
-	border-color: black;
-	border-style: solid;
-	border-radius: 10px;
-	width:0%;
-}
-.CIA tr:nth-child(5) td button{
-	color: maroon;
-	background-color: ghostwhite;
-	border-color: black;
-	border-style: solid;
-	padding:4%;
-	margin: inherit;
-	text-align: center;
-	border-radius: 10px;
-	font-size:24px;
-	width:100%;
-}
-.CIA tr:nth-child(6) td button{
-	padding: 2% !important;
+.table2 tr:nth-child(6) td button {
+	margin: 0;
+	padding: 2%;
+	overflow: hidden;
+	height: 100%
 }
 #Jarg{
 	margin-left:70%;
@@ -134,10 +113,10 @@ position:absolute;
 }
 .Result {
 	clear: both;
+	bottom:0px;
 	margin-left: 5%;
 	margin-top: 5%;
 	float: left;
-	table-layout: fixed;
 	width:70%;
 	height: 20%;
 }
@@ -146,7 +125,6 @@ position:absolute;
 	min-width: 12%;
 	max-width: 12%;
 	overflow:hidden;
-	vertical-align:top;
 }
 #hopetable {
 	width: 15%;
@@ -271,17 +249,10 @@ position:absolute;
 .TableA th {
 	background-image: linear-gradient(178deg, lavender 20%, mediumorchid 99%);
 }
-.LockButton {
-	background-color: lightgrey !important;
-}
-.LockButtonRESET {
-	background-color: lightgrey !important;
-	color: lightgrey !important;
-}
 .Vanguard {
 	background-image: url("Vanguard.png") !important;
-	background-position: left !important;
-	background-size: 100px !important;
+	background-position: 2% 50% !important;
+	background-size: 20% !important;
 	background-repeat: no-repeat !important;
 }
 .Guard {
