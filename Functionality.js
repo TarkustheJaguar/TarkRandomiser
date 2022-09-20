@@ -62,16 +62,17 @@ function disRB() {
 	var g = document.getElementById('john');
 	var c = parseInt(document.getElementById('falsify').innerText);
 	var st = z.innerHTML.split(': ')[1];
-	if (g.innerText === ""){arr.push(st);
+	if ((g.innerText === "") && (z.innerText != "Out of Operators!")){arr.push(st);
 			g.innerText = (arr);}
-	else if (c < show) {arr.push(st);
+	else if ((c < show) && (z.innerText != "Out of Operators!")) {arr.push(st);
 			g.innerText = (arr.join('\n'));}
-	z.innerHTML = ' <br> ';
 	z.className = 'blank';
-	document.getElementById('falsify').innerText = (c)+1;
-	if (c >= show) {arr.push(st);
+	if (z.innerText != "Out of Operators!"){
+	document.getElementById('falsify').innerText = (c)+1;}
+	if ((c >= show) && (z.innerText != "Out of Operators!")) {arr.push(st);
 		arr.shift();
 		g.innerText = (arr.join('\n'))}
+	z.innerHTML = ' <br> ';
     }
 function EnRB() {
 	var y = (((((event.target).parentElement).nextElementSibling).firstChild));
@@ -87,7 +88,7 @@ function EnRB() {
 function HopeCheck() {
 	var a = parseInt(document.getElementById('number').value, 10);
 	var b = document.getElementById('hopetable');
-		if (a > 9) {return;}
+		if (a > 10) {return;}
 		else {b.className = HT[a];}
 }
 	        const HT = [];
@@ -101,6 +102,7 @@ function HopeCheck() {
 			HT[7] = "Hope7";
 			HT[8] = "Hope8";
 			HT[9] = "Hope9";
+			HT[10] = "Hope10";
 // UNIVERSAL Randomiser. Nested Successfully. 'QQ' returns results in quotations - if statements are workarounds
 	function randVal(){
 		var T = parseInt(document.getElementById('number').value, 10);
@@ -164,7 +166,8 @@ function HopeCheck() {
 			if ((index3 !== -1) && ((DD!="Reserve Op: Melee")&&(DD!="Reserve Op: Ranged")&&(DD!="Reserve Medic"))&&(Q === (All))){
 					(are)[xt].splice(index3, 1);
 					}
-		return 'Result: ' + DD;
+		if (index != -1){
+		return 'Results: ' + DD;} else {return "Out of Operators!"}
 		}			
 const Defender = [];
 const Guard = [];
@@ -186,35 +189,35 @@ function TestRest(){
 	Medic.length = 0;
 	Specialist.length = 0;
 	All.length = 0;
-			Defender[0] = ["Reserve Op: Melee", "Noir Corne", "Beagle", "Cardigan", "Spot"];	
+			Defender[0] = ["Noir Corne", "Beagle", "Cardigan", "Spot"];	
 			Defender[1] = ["Cuora", "Dur-nar", "Bubble", "Gummy", "Matterhorn"];
 			Defender[2] = ["Liskarm", "Vulcan", "Aurora", "Nearl", "Asbestos", "Ashlock", "Shalem", "Croissant", "Bison", "Blitz", "Heavyrain", "Hung"];
 			Defender[3] = ["Nian", "Hoshiguma", "Saria", "Mudrock", "Blemishine", "Eunectes"];
-			Guard[0] = ["Reserve Op: Melee", "Castle-3","Melantha", "Popukar", "Midnight"];	
+			Guard[0] = ["Castle-3","Melantha", "Popukar", "Midnight"];	
 			Guard[1] = ["Matoimaru", "Cutter", "Conviction", "Estelle", "Utage", "Frostleaf", "Beehunter", "Jackie", "Mousse", "Arene", "Dobermann"];
 			Guard[2] = ["Specter", "Broca", "Savage", "La Pluma", "Lappland", "Franka", "Astesia", "Tequila", "Akafuyu", "Bibeak", "Swire", "Whislash", "Indra", "Amiya (G)", "Flint", "Ayerscarpe", "Tachanka", "Flamebringer", "Sideroca"];
 			Guard[3] = ["Blaze", "SilverAsh", "Surtr", "Thorns", "Mountain", "Skadi", "Hellagur", "Ch'en", "Nearl (TRK)", "Pallas"];
-			Vanguard[0] = ["Reserve Op: Melee", "Yato", "Fang", "Plume", "Vanilla"];
+			Vanguard[0] = ["Yato", "Fang", "Plume", "Vanilla"];
 			Vanguard[1] = ["Vigna", "Beanstalk", "Scavenger", "Courier", "Myrtle"];
 			Vanguard[2] = ["Grani", "Reed", "Wildmane", "Blacknight", "Texas", "Zima", "Elysium", "Chiave"];
 			Vanguard[3] = ["Bagpipe", "Saileach", "Siege", "Flametail", "Saga"];
-			Sniper[0] = ["Reserve Op: Ranged", "'Justice Knight'", "Rangers","Kroos","Adnachiel","Catapult"];
+			Sniper[0] = ["'Justice Knight'", "Rangers","Kroos","Adnachiel","Catapult"];
 			Sniper[1] = ["Jessica","Meteor","Vermeil","May","Ambriel","Pinecone","Aciddrop","Shirayuki"];
 			Sniper[2] = ["Kroos (KG)","GreyThroat","April","Executor","Platinum","Blue Poison","Sesa","Firewatch","Andreana","Aosta","Provence","Toddifons","Meteorite"];
 			Sniper[3] = ["Exusiai","Archetto","Ash","W","Fartooth","Ch'en (H)","Schwarz","Rosa","Rosmontis","Fiametta"];
-			Medic[0] = ["Reserve Medic","Lancet-2","Hibiscus","Ansel"];
+			Medic[0] = ["Lancet-2","Hibiscus","Ansel"];
 			Medic[1] = ["Perfumer", "Sussurro", "Myrrh","Purestream","Gavial"];
 			Medic[2] = ["Warfarin","Ptilopsis","Breeze","Ceylon","Tuye","Mulberry","Folinic","Silence","Whisperain","Honeyberry"];
 			Medic[3] = ["Kal'tsit","Nightingale","Shining"];
-			Specialist[0] = ["Reserve Op: Melee", "THRM-EX"];
+			Specialist[0] = ["THRM-EX"];
 			Specialist[1] = ["Shaw","Ethan","Jaye","Rope","Gravel"];
 			Specialist[2] = ["Projekt Red","Enforcer","Kafka","Manticore","Bena","Robin","KAZEMARU","Waai Fu","Cliffheart","FEater","Mr. Nothing","Snowsant","Frost","Kirara"];
 			Specialist[3] = ["Weedy","Gladiia","Lee","Phantom","Mizuki","Aak"]
-			Supporter[0] = ["Reserve Op: Ranged","Orchid"];
+			Supporter[0] = ["Orchid"];
 			Supporter[1] = ["Deepcolor","Podenco","Earthspirit","Roberta"];
 			Supporter[2] = ["Mayer","Scene","Sora","Shamare","Istina","Quercus","Glaucus","Nine-Colored Deer","Pramanix","Tsukinogi"];
 			Supporter[3] = ["Angelina","Ling","Skadi (CH)","Suzuran","Magallan","Gnosis"];
-			Caster[0] = ["Reserve Op: Ranged","12F","Durin","Lava","Steward"];
+			Caster[0] = ["12F","Durin","Lava","Steward"];
 			Caster[1] = ["Click","Gitano","Haze","Indigo","Greyy","Pudding"];
 			Caster[2] = ["Leizi","Kjera","Skyfire","Iris","Lava (Purgatory)","Nightmare","Beeswax","Mint","Tomimi","Corroserum","Leonhardt","Amiya","Absinthe"];
 			Caster[3] = ["Ifrit","Ceobe","Dusk","Mostima","Eyjafjalla","Carnellian","Goldenglow","Passenger"];			
@@ -249,3 +252,78 @@ function accept(){
 }
 var CN = 1;
 var RR = "r1";
+
+function ResetAB() {
+	CN = 1;
+	RR = "r1";
+	document.getElementById("r1").innerText = "";
+	document.getElementById("r2").innerHTML = "";
+	document.getElementById("r3").innerHTML = "";
+	document.getElementById("r4").innerHTML = "";
+	document.getElementById("r5").innerHTML = "";
+	document.getElementById("r6").innerHTML = "";
+	document.getElementById("r7").innerHTML = "";
+	document.getElementById("r8").innerHTML = "";
+	document.getElementById("r9").innerHTML = "";
+	document.getElementById("r10").innerHTML = "";
+	document.getElementById("r11").innerHTML = "";
+	document.getElementById("r12").innerHTML = "";
+	document.getElementById('falsify').innerText = 0;
+	arr.length = 0;
+	document.getElementById('john').innerText = "";
+	document.getElementById("hopetable").style.display = "none";
+	document.getElementById("ISYAY").style.display = "block";
+}
+	
+function AddIS(){
+	var rg = Guard[0].indexOf("Reserve Op: Melee");
+	var vg = Vanguard[0].indexOf("Reserve Op: Melee");
+	var rd = Defender[0].indexOf("Reserve Op: Melee");
+	var rs = Specialist[0].indexOf("Reserve Op: Melee");
+	var rm = Medic[0].indexOf("Reserve Medic");
+	var rsp = Supporter[0].indexOf("Reserve Op: Ranged");
+	var rsn = Sniper[0].indexOf("Reserve Op: Ranged");
+	var rc = Caster[0].indexOf("Reserve Op: Ranged");
+	var i = 1;
+	if ((Guard[0].indexOf("Reserve Op: Melee")) != (-1)){
+		Guard[0].splice(rg, 1), Vanguard[0].splice(vg, 1), Defender[0].splice(rd, 1), Specialist[0].splice(rs, 1);
+		Medic[0].splice(rm, 1), Supporter[0].splice(rsp, 1), Sniper[0].splice(rsn, 1), Caster[0].splice(rc, 1);
+		while (i < 5){
+			var ra1 = All[0].indexOf("Reserve Op: Melee");			
+			if (ra1 != -1){All[0].splice(ra1, 1);}
+			var ra2 = All[0].indexOf("Reserve Op: Ranged");
+			if (ra2 != -1){All[0].splice(ra2, 1)};
+			var ra3 = All[0].indexOf("Reserve Medic");
+			if (ra3 != -1){All[0].splice(ra3, 1)};
+			i++;}
+		document.getElementById("jeg").innerText = "Enable IS";
+	} else {
+	Guard[0].push("Reserve Op: Melee"), Vanguard[0].push("Reserve Op: Melee"), Specialist[0].push("Reserve Op: Melee");
+	Defender[0].push("Reserve Op: Melee"), Medic[0].push("Reserve Medic"),Supporter[0].push("Reserve Op: Ranged");
+	Sniper[0].push("Reserve Op: Ranged"), Caster[0].push("Reserve Op: Ranged");
+	All[0].push("Reserve Op: Melee", "Reserve Op: Ranged", "Reserve Medic");
+	document.getElementById("jeg").innerText = "Disable IS";
+	}
+	var jor = (document.getElementById("hopetable"));
+	if (jor.style.display === "none"){jor.style.display = "block";}
+	else{jor.style.display = "none";}
+	var bruhs = (document.getElementById("ISYAY"));
+	if (bruhs.style.display === "none"){bruhs.style.display = "block";}
+	else {bruhs.style.display = "none";}
+}
+function HopeCycle(){
+	var arrrr = event.target.innerText;
+	if(arrrr === '6*'){var Corre = "6";}
+	if(arrrr === '5*'){var Corre = "3";}
+	if(arrrr === '4*'){var Corre = "2";}
+	if(arrrr === '3*'){var Corre = "0";}
+	document.getElementById("number").value = Corre;
+	HopeCheck();
+}
+//Change log:
+//Added ability to toggle IS reserve operators (AddIS())
+//Set default to IS (OFF)
+//Added 'out of operators' condition
+//Added ResetAB() - which removes stored results and resets to zero. Added to reset button.
+//ResetAB() also resets reroll result array, and incremented number.
+//Added HopeCycle() to directly set rarity. Very WIP styling. Eventually hide all the default IS hope stuff.
