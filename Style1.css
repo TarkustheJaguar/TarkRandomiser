@@ -251,15 +251,51 @@ body{
 	background-image: linear-gradient(178deg, lavender 20%, mediumorchid 99%);
 }
 .Vanguard {
-	background-image: url("Vanguard.png") !important;
+	background-image: url("Vanguard.webp") !important;
 	background-position: 2% 50% !important;
 	background-size: 20% !important;
 	background-repeat: no-repeat !important;
 }
 .Guard {
-	background-image: url("Guard.png") !important;
-	background-position: left !important;
-	background-size: 100px !important;
+	background-image: url("Guard.webp") !important;
+	background-position: 2% 50% !important;
+	background-size: 20% !important;
+	background-repeat: no-repeat !important;
+}
+.Defender {
+	background-image: url("Defender.webp") !important;
+	background-position: 2% 50% !important;
+	background-size: 20% !important;
+	background-repeat: no-repeat !important;
+}
+.Medic {
+	background-image: url("Medic.webp") !important;
+	background-position: 2% 50% !important;
+	background-size: 20% !important;
+	background-repeat: no-repeat !important;
+}
+.Sniper {
+	background-image: url("Sniper.webp") !important;
+	background-position: 2% 50% !important;
+	background-size: 20% !important;
+	background-repeat: no-repeat !important;
+}
+.Caster {
+	background-image: url("Caster.webp") !important;
+	background-position: 2% 50% !important;
+	background-size: 20% !important;
+	background-repeat: no-repeat !important;
+}
+.Supporter {
+	background-image: url("Supporter.webp") !important;
+	background-position: 2% 50% !important;
+	background-size: 20% !important;
+	background-repeat: no-repeat !important;
+}
+.Specialist {
+	background-image: url("Specialist.webp") !important;
+	background-position: 2% 50% !important;
+	background-size: 20% !important;
 	background-repeat: no-repeat !important;
 }
 /* The below are background changes for the array
