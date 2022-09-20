@@ -28,7 +28,7 @@
 		<tr><td>DISABLED</td></tr>
 	</table>
 	<div id="Back">
-		<table class="Table2 CIA">
+		<table class="Table2">
 			<tr><th colspan="2"> Operators </th></tr>
 			<tr><td><button type="button" onclick="ToggleTest2()">Vanguard</button></td>
 				<td><button type="button" onclick="ToggleTest2()">Guard</button></td></tr>
@@ -42,91 +42,82 @@
 		</table>
 	</div>
 	<div id="Vanguard" hidden>
-		<table class="Table2 TableVG">
+		<table class="Table2 TableVG Table4">
 			<tr><th colspan="2">Vanguards</th></tr>
 			<tr><td colspan="2"><button type="button" onclick="disB();ToggleTest2()">Back</button></td></tr>
-				<tr><td><button type="button"onclick="document.getElementById('VGres').innerHTML=randVal();EnRB()">Roll</button></td>
-				<td><button class="LockButtonRESET"type="button" onclick="disRB()" disabled> Separater </button></td></tr>
+				<tr><td colspan="2"><button type="button"onclick="disRB();document.getElementById('VGres').innerHTML=randVal()">Roll</button></td></tr>
 				<tr><td colspan="2"id="VGres"><br></td></tr>
 				<tr><td><button type="button"onclick="accept()">Accept</button></td></tr>
 		</table>
 	</div>
 	<div id="Guard" hidden>
-		<table class="Table2 TableG">
+		<table class="Table2 TableG Table4">
 			<tr><th colspan="2">Guards</th></tr>
 			<tr><td colspan="2"><button type="button" onclick="disB();ToggleTest2()">Back</button></td></tr>
-				<tr><td><button type="button"onclick="document.getElementById('Gres').innerHTML=randVal();EnRB()">Roll</button></td>
-				<td><button class="LockButtonRESET"type="button"disabled onclick="disRB();RemTest()"> Separater </button></td></tr>
+				<tr><td><button type="button"onclick="disRB();document.getElementById('Gres').innerHTML=randVal()">Roll</button></td>
 				<tr><td colspan="2"id="Gres"><br></td></tr>
 				<tr><td><button type="button"onclick="accept()">Accept</button></td></tr>
 		</table>
 	</div>
 	<div id="Defender" hidden>
-		<table class="Table2 TableD">
+		<table class="Table2 TableD Table4">
 			<tr><th colspan="2">Defenders</th></tr>
 			<tr><td colspan="2"><button type="button" onclick="disB();ToggleTest2()">Back</button></td></tr>
-				<tr><td><button type="button"onclick="document.getElementById('Dres').innerHTML=randVal();EnRB()">Roll</button></td>
-				<td><button class="LockButtonRESET"type="button" onclick="disRB()" disabled> Separater </button></td></tr>
+				<tr><td><button type="button"onclick="disRB();document.getElementById('Dres').innerHTML=randVal()">Roll</button></td>
 				<tr><td colspan="2"id="Dres"><br></td></tr>
 				<tr><td><button type="button"onclick="accept()">Accept</button></td></tr>
 		</table>
 	</div>
 		<div id="Medic" hidden>
-		<table class="Table2 TableM">
+		<table class="Table2 TableM Table4">
 			<tr><th colspan="2">Medics</th></tr>
 			<tr><td colspan="2"><button type="button" onclick="disB();ToggleTest2()">Back</button></td></tr>
-				<tr><td><button type="button"onclick="document.getElementById('Mres').innerHTML=randVal();EnRB()">Roll</button></td>
-				<td><button class="LockButtonRESET"type="button" onclick="disRB()" disabled> Separater </button></td></tr>
+				<tr><td><button type="button"onclick="disRB();document.getElementById('Mres').innerHTML=randVal()">Roll</button></td>
 				<tr><td colspan="2"id="Mres"><br></td></tr>
 				<tr><td><button type="button"onclick="accept()">Accept</button></td></tr>
 		</table>
 	</div>
 	<div id="Sniper" hidden>
-		<table class="Table2 TableSN">
+		<table class="Table2 TableSN Table4">
 			<tr><th colspan="2">Snipers</th></tr>
 			<tr><td colspan="2"><button type="button" onclick="disB();ToggleTest2()">Back</button></td></tr>
-				<tr><td><button type="button"onclick="document.getElementById('SNres').innerHTML=randVal();EnRB()">Roll</button></td>
-				<td><button class="LockButtonRESET"type="button"onclick="disRB()"disabled> Separater </button></td></tr>
+				<tr><td><button type="button"onclick="disRB();document.getElementById('SNres').innerHTML=randVal()">Roll</button></td>
 				<tr><td colspan="2"id="SNres"><br></td></tr>
 				<tr><td><button type="button"onclick="accept()">Accept</button></td></tr>
 		</table>
 	</div>
 	<div id="Caster" hidden>
-		<table class="Table2 TableC">
+		<table class="Table2 TableC Table4">
 			<tr><th colspan="2">Casters</th></tr>
 			<tr><td colspan="2"><button type="button" onclick="disB();ToggleTest2()">Back</button></td></tr>
-				<tr><td><button type="button"onclick="document.getElementById('Cres').innerHTML=randVal();EnRB()">Roll</button></td>
-				<td><button class="LockButtonRESET"type="button"onclick="disRB()"disabled> Separater </button></td></tr>
+				<tr><td><button type="button"onclick="disRB();document.getElementById('Cres').innerHTML=randVal()">Roll</button></td>
 				<tr><td colspan="2"id="Cres"><br></td></tr>
 				<tr><td><button type="button"onclick="accept()">Accept</button></td></tr>
 		</table>
 	</div>
 	<div id="Supporter" hidden>
-		<table class="Table2 TableSU">
+		<table class="Table2 TableSU Table4">
 			<tr><th colspan="2">Supporters</th></tr>
 			<tr><td colspan="2"><button type="button" onclick="disB();ToggleTest2()">Back</button></td></tr>
-				<tr><td><button type="button"onclick="document.getElementById('SUres').innerHTML=randVal();EnRB()">Roll</button></td>
-				<td><button class="LockButtonRESET"type="button"onclick="disRB()"disabled> Separater </button></td></tr>
+				<tr><td><button type="button"onclick="disRB();document.getElementById('SUres').innerHTML=randVal()">Roll</button></td>
 				<tr><td colspan="2"id="SUres"><br></td></tr>
 				<tr><td><button type="button"onclick="accept()">Accept</button></td></tr>
 		</table>
 	</div>
 	<div id="Specialist" hidden>
-		<table class="Table2 TableSP">
+		<table class="Table2 TableSP Table4">
 			<tr><th colspan="2">Specialists</th></tr>
 			<tr><td colspan="2"><button type="button" onclick="disB();ToggleTest2()">Back</button></td></tr>
-				<tr><td><button type="button"onclick="document.getElementById('SPres').innerHTML=randVal();EnRB()">Roll</button></td>
-				<td><button class="LockButtonRESET"type="button"onclick="disRB()"disabled> Separater </button></td></tr>
+				<tr><td><button type="button"onclick="disRB();document.getElementById('SPres').innerHTML=randVal()">Roll</button></td>
 				<tr><td colspan="2"id="SPres"><br></td></tr>
 				<tr><td><button type="button"onclick="accept()">Accept</button></td></tr>
 		</table>
 	</div>
 	<div id="All" hidden>
-		<table class="Table2 TableA">
+		<table class="Table2 TableA Table4">
 			<tr><th colspan="2">All</th></tr>
 			<tr><td colspan="2"><button type="button" onclick="disB();ToggleTest2()">Back</button></td></tr>
-				<tr><td><button type="button"onclick="document.getElementById('Owl').innerHTML=randVal();EnRB()">Roll</button></td>
-				<td><button class="LockButtonRESET"type="button"onclick="disRB()"disabled> Separater </button></td></tr>
+				<tr><td><button type="button"onclick="disRB();document.getElementById('Owl').innerHTML=randVal()">Roll</button></td>
 				<tr><td colspan="2"id="Owl"><br></td></tr>
 				<tr><td><button type="button" onclick="accept()">Accept</button></td></tr>
 		</table>
