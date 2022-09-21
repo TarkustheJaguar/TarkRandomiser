@@ -37,7 +37,7 @@
 		background-color:darkgrey;
 	}
 	.Table2 td {
-		color: RGB(110, 110, 220);
+		color: maroon;
 		background-color: ghostwhite;
 		border-color: black;
 		border-style: solid;
@@ -51,7 +51,7 @@
 		padding:4%;
 	}
 	.Table2 td button {
-		color: RGB(110, 110, 220);
+		color: maroon;
 		background-color: ghostwhite;
 		border-color: black;
 		border-style: solid;
@@ -84,7 +84,7 @@
 		position:absolute;
 	}
 	.Table4 tr:nth-child(5) td button {
-		background-color: red;
+		background-color: RGB(110, 110, 220);
 		margin-left: auto;
 		margin-right: auto;
 		width: 100%;
