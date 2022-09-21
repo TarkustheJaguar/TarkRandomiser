@@ -1,373 +1,375 @@
-<style>
-.Table2 {}
-body{
-	background-color:lightgrey;
-}
-#ISYAY{
-	display: inline-block;
-	padding-top: 1%;
-	margin-top:0%;
-	width:15%;
-	font-size:100%;
-	position: absolute;
-	height: 60%;
-	background-image:url("Sharp.webp")!important;
-	background-position: center 250% !important;
-	background-position: padding-top:10px;
-	background-size: 170% !important;
-	background-repeat: no-repeat !important;
-	background-color: grey;
-}
-#ISYAY tr{
-	margin:0;
-	width:100%;
-	background-color:darkgrey;
-	text-align:center;
-}
-#ISYAY tr:nth-child(5) td{
-	position:absolute;
-	width:96%;
-	padding:0;
-	bottom:0;
-	text-align:center;
-	line-height:200%;
-	height:10%;
-	border-color:black;
-	border-style:solid;
-	background-color:darkgrey;
-}
-.Table2 td {
-	color: maroon;
-	background-color: ghostwhite;
-	border-color: black;
-	border-style: solid;
-	padding:0px;
-	text-align: center;
-	border-radius: 10px;
-	height: auto;
-	width:50%;
-}
-.Table4 tr:nth-child(4) td{
-	padding:4%;
-}
-.Table2 td button {
-	color: maroon;
-	background-color: ghostwhite;
-	border-color: black;
-	border-style: solid;
-	padding:4%;
-	height:100%;
-	text-align: center;
-	border-radius: 10px;
-	font-size:24px;
-	width:100%;
-}
-.Table2 th {
-	font-size:32px;
-	padding: 10px;
-	border-bottom: 2px solid black;
-	background-color: slategray;
-}
-.Table2 {
-	table-layout: auto;
-	width:40%;
-	height:60%;
-	border-radius: 5px;
-	text-align: center;
-	margin-right:5%;
-	margin-left:20%;
-	border-color: black;
-	border-style: solid;
-	background-color: lightslategray;
-	float: left;
-	position:absolute;
-}
-.Table4 tr:nth-child(5) td button {
-	background-color: red;
-	margin-left: auto;
-	margin-right: auto;
-	width: 100%;
-}
-.Table4 tr:nth-child(5) td {
-	background-color: inherit;
-	border: none;
-}
-.Table4 tr:nth-child(4) td {
-	font-size: 40px;
-	padding-left: 22%;
-	text-align: left;
-}
-.table2 tr:nth-child(6) td button {
-	margin: 0;
-	padding: 2%;
-	overflow: hidden;
-	height: 100%
-}
-#Jarg{
-	margin-left:70%;
+	<style>
+	.Table2 {}
+	body{
+		background-color:lightgrey;
+	}
+	#ISYAY{
+		display: inline-block;
+		padding-top: 1%;
+		margin-top:0%;
+		width:15%;
+		font-size: 3.0vmin;
+		position: absolute;
+		height: 60%;
+		background-image:url("Sharp.webp")!important;
+		background-position: center 250% !important;
+		background-size: 170% !important;
+		background-repeat: no-repeat !important;
+		background-color: grey;
+	}
+	#ISYAY tr{
+		margin:0;
+		width:100%;
+		background-color:darkgrey;
+		text-align:center;
+	}
+	#ISYAY tr:nth-child(5) td{
+		position:absolute;
+		width:96%;
+		padding:0;
+		bottom:0;
+		text-align:center;
+		line-height:200%;
+		height:10%;
+		border-color:black;
+		border-style:solid;
+		background-color:darkgrey;
+	}
+	.Table2 td {
+		color: maroon;
+		background-color: ghostwhite;
+		border-color: black;
+		border-style: solid;
+		padding:0px;
+		text-align: center;
+		border-radius: 10px;
+		height: auto;
+		width:50%;
+	}
+	.Table4 tr:nth-child(4) td{
+		padding:4%;
+	}
+	.Table2 td button {
+		color: maroon;
+		background-color: ghostwhite;
+		border-color: black;
+		border-style: solid;
+		padding:4%;
+		height:100%;
+		text-align: center;
+		border-radius: 10px;
+		font-size: 4.2vmin;
+		width:100%;
+	}
+	.Table2 th {
+		font-size: 5.8vmin;
+		padding: 10px;
+		border-bottom: 2px solid black;
+		background-color: slategray;
+	}
+	.Table2 {
+		table-layout: auto;
+		width:40%;
+		height:60%;
+		border-radius: 5px;
+		text-align: center;
+		margin-right:5%;
+		margin-left:20%;
+		border-color: black;
+		border-style: solid;
+		background-color: lightslategray;
+		float: left;
+		position:absolute;
+	}
+	.Table4 tr:nth-child(5) td button {
+		background-color: red;
+		margin-left: auto;
+		margin-right: auto;
+		width: 100%;
+	}
+	.Table4 tr:nth-child(5) td {
+		background-color: inherit;
+		border: none;
+	}
+	.Table4 tr:nth-child(4) td {
+		font-size: 40px;
+		padding-left: 22%;
+		text-align: left;
+	}
+	.table2 tr:nth-child(6) td button {
+		margin: 0;
+		padding: 2%;
+		overflow: hidden;
+		height: 100%
+	}
+	#Jarg{
+		margin-left:70%;
 
-}
-#john {
-	position:absolute;
-	margin-left:10%;
-}
-.Result {
-	clear: both;
-	position: relative;
-	bottom:0px;
-	margin-left: 5%;
-	margin-top: 7%;
-	float: left;
-	width:70%;
-	height: 20%;
+	}
+	#john {
+		position:absolute;
+		margin-left:10%;
+	}
+	.Result {
+		clear: both;
+		position: relative;
+		bottom:0px;
+		margin-left: 5%;
+		margin-top: 7%;
+		float: left;
+		width:70%;
+		height: 20%;
 
-}
-.Result td {
-	margin-top:4%;
-	padding-top:0%;
-	width: 12%;
-	min-width: 12%;
-	max-width: 12%;
-	overflow:hidden;
-}
-#hopetable {
-	width: 15%;
-	margin-left:0%;
-	margin-right:0%;
-	height:55%;
-	display: inline-block;
-	padding:0px;
-	margin:0%;
-	padding-top: 14%;
-	float: left;
-	border-style: solid;
-	border-width: 3px;
-	border-color: darkred;
-	font-size: 26px;
-	text-align: center;
-	border-radius:6px;
-}
-#hopetable td {
-	border-radius:3px;
-	background-image: linear-gradient(to bottom right, white, lightgrey, whitesmoke, silver 70%, whitesmoke, black);
-	opacity: 85%;
-}
-#hopetable tr:nth-child(-n+1):nth-child(n+1) td{ /*left-highest right-lowest*/
-	border-style: double;
-	width:4%;
-	border-color:gray;
-	background-image: linear-gradient(to bottom right, lemonchiffon, lightpink);
-	box-shadow: 0 0 3px lightyellow, 0 0 2px yellow;
-}
-#hopetable tr:nth-child(2) td{
-	background-image: linear-gradient(to bottom right, white 30%, plum, black);
-	border-color: black;
-	border-style: double;
-	border-radius:15px;
-	pointer-events: none;
-}
-#hope {
-	padding-bottom:0;
-}
-#hope input {
-	background-color: inherit;
-	width: 80%;
-	height: 100%;
-	margin-top:4px;
-	margin-bottom:-22px;
-	align-items: center;
-	text-align: center;
-	font-size:28px;
-	border:none;
-}
-#hopetable button {
-	color:lightgrey;
-	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-	border: 1px solid;
-	border-radius:3px;
-	border-color: black;
-	font-weight: bold;
-	width:100%;
-	background-color:transparent;
-}
-#hopetable button:hover {
-	box-shadow: 0 1px 10px 0 white, 0 1px 10px 0 white;
-}
-#hopetable button:active {
-  transform: scaleY(1.01);
-  transform: scaleX(1.02);
-  box-shadow: 0 1px 10px 0 white, 0 1px 15px 0 white;
-}
-.TableVG {
-	background-color: sandybrown;
-}
-.TableVG th {
-	background-image: linear-gradient(178deg, orange 20%, bisque 99%);
-}
-.TableG {
-	background-color: crimson;
-}
-.TableG th {
-	background-image: linear-gradient(178deg, red 20%, bisque 99%);
-}
-.TableD {
-	background-color: lightskyblue;
-}
-.TableD th {
-	background-image: linear-gradient(178deg, skyblue 20%, blue 99%);
-}
-.TableM {
-	background: linear-gradient(180deg, black 21%, snow 22%);
-}
-.TableM th {
-	background-image: linear-gradient(180deg, lightgrey 2%, whitesmoke 20%, white 99%);
-}
-.TableSN {
-	background-color: Gold;
-}
-.TableSN th {
-	background-image: linear-gradient(178deg, yellow 20%, lightgoldenrodyellow 99%);
-}
-.TableC {
-	background-color: Antiquewhite;
-}
-.TableC th {
-	background-image: linear-gradient(178deg, lightgoldenrodyellow 20%, sandybrown 99%);
-}
-.TableSU {
-	background-color: lawngreen;
-}
-.TableSU th {
-	background-image: linear-gradient(178deg, yellow 20%, lightgreen 99%);
-}
-.TableSP {
-	background-color: Plum;
-}
-.TableSP th {
-	background-image: linear-gradient(178deg, lavender 20%, mediumorchid 99%);
-}
-.TableA {
-	background-color: cyan;
-}
-.TableA th {
-	background-image: linear-gradient(178deg, lavender 20%, mediumorchid 99%);
-}
-.Vanguard {
-	background-image: url("Vanguard.webp") !important;
-	background-position: 2% 50% !important;
-	background-size: 20% !important;
-	background-repeat: no-repeat !important;
-}
-.Guard {
-	background-image: url("Guard.webp") !important;
-	background-position: 2% 50% !important;
-	background-size: 20% !important;
-	background-repeat: no-repeat !important;
-}
-.Defender {
-	background-image: url("Defender.webp") !important;
-	background-position: 2% 50% !important;
-	background-size: 20% !important;
-	background-repeat: no-repeat !important;
-}
-.Medic {
-	background-image: url("Medic.webp") !important;
-	background-position: 2% 50% !important;
-	background-size: 20% !important;
-	background-repeat: no-repeat !important;
-}
-.Sniper {
-	background-image: url("Sniper.webp") !important;
-	background-position: 2% 50% !important;
-	background-size: 20% !important;
-	background-repeat: no-repeat !important;
-}
-.Caster {
-	background-image: url("Caster.webp") !important;
-	background-position: 2% 50% !important;
-	background-size: 20% !important;
-	background-repeat: no-repeat !important;
-}
-.Supporter {
-	background-image: url("Supporter.webp") !important;
-	background-position: 2% 50% !important;
-	background-size: 20% !important;
-	background-repeat: no-repeat !important;
-}
-.Specialist {
-	background-image: url("Specialist.webp") !important;
-	background-position: 2% 50% !important;
-	background-size: 20% !important;
-	background-repeat: no-repeat !important;
-}
-/* The below are background changes for the array
-By assigning the consistent styling to the ID instead of class, you minimise duplication*/
-.Hope0 {
-	background-image: linear-gradient(to bottom, 
-		black 29%,darkred 39%, brown 42%, black 50%);
-}
-.Hope1 {
-	background-image: linear-gradient(to bottom, 
-		black 15%, #191946 29%, darkred 39%, brown 42%, black 60%);
-}
-.Hope2 {
-	background-image: linear-gradient(to bottom, 
-		midnightblue 13%, steelblue 29%, skyblue 31%, white 31.5%, lightyellow 32%, yellow 33%, peru 36%, darkred 39%, brown 42%, black 65%);
-}
-.Hope3 {
-	background-image: linear-gradient(to bottom, 
-		steelblue 5%, skyblue 20%, white 25%, lightyellow 30%, yellow 32%, gold 34%, goldenrod 36%, darkgoldenrod 40%, indianred 44%, brown 60%, black 60%);
-}
-.Hope4 {
-	background-image: linear-gradient(to bottom, 
-		steelblue 1%, skyblue 5%, white 25%, lightyellow 30%, yellow 40%, gold 44%, goldenrod 47%, indianred 60%, brown 64%, black 78%);
-}
-.Hope5 {
-	background-image: linear-gradient(to bottom, 
-		skyblue 7%, white 35%, lightyellow 42%, yellow 47%,gold 50%, goldenrod 54%, lightpink 60%, brown 79%, black 96%);
-}
-.Hope6 {
-	background-image: linear-gradient(to bottom, 
-		skyblue 5%, white 33%, lightyellow 52%, yellow 56%, goldenrod 60%, lightpink 73%, brown 95%, black 99%);
-}
-.Hope7 {
-	background-image: linear-gradient(to bottom,
-		skyblue 2%, white 24%, white 43%, lightyellow 56%, yellow 60%, goldenrod 62%, lightpink 76%, brown 95%);
-}
-.Hope8 {
-	background-image: linear-gradient(to bottom,
-		lightskyblue 1%, white 20%, white 43%, lightyellow 63%, lightpink 82%, brown 99%);
-}
-.Hope9 {
-	background-image: linear-gradient(to bottom,
-		lightskyblue 1%, white 15%, white 53%, lightyellow 73%, lightpink 92%, pink 99%, brown 99.5%);
-}
-.Hope10 {
-	background-image: linear-gradient(to bottom,
-		lavender 1%,  white 11%, white 53%, lightyellow 83%, lightpink 97%, pink 99.5%, brown 99.9%);
-}
-.cycle {
-	margin-bottom:40%;
-}
-.cycle td {
-	float:left;
-	width:15%;
-	margin-top:-15%;
-	padding:15px;
-	table-layout:auto;
-}
-.cycle td button{
-	float:left;
-	color: maroon;
-	padding-left: 15px;
-	padding-right: 15px;
-	background-color: transparent;
-	border-color: black;
-	border-style: solid;
-	background-color:lightblue;
-	text-align: center;
-	border-radius: 10px;
-	font-size:14px;
-	width:200%;
-}
-</style>
+	}
+	.Result td {
+		margin-top:4%;
+		padding-top:0%;
+		width: 12%;
+		min-width: 12%;
+		max-width: 12%;
+		overflow:hidden;
+	}
+	#hopetable {
+		width: 15%;
+		margin-left:0%;
+		margin-right:0%;
+		height:55%;
+		display: inline-block;
+		padding:0px;
+		margin:0%;
+		padding-top: 14%;
+		float: left;
+		border-style: solid;
+		border-width: 3px;
+		border-color: darkred;
+		font-size: 5vmin;
+		text-align: center;
+		border-radius:6px;
+	}
+	#hopetable td {
+		border-radius:3px;
+		background-image: linear-gradient(to bottom right, white, lightgrey, whitesmoke, silver 70%, whitesmoke, black);
+		opacity: 85%;
+		height: 5vmin;
+	}
+	#hopetable tr:nth-child(-n+1):nth-child(n+1) td{ /*left-highest right-lowest*/
+		border-style: double;
+		width:4%;
+		border-color:gray;
+		background-image: linear-gradient(to bottom right, lemonchiffon, lightpink);
+		box-shadow: 0 0 3px lightyellow, 0 0 2px yellow;
+	}
+	#hopetable tr:nth-child(2) td{
+		background-image: linear-gradient(to bottom right, white 30%, plum, black);
+		border-color: black;
+		border-style: double;
+		border-radius:15px;
+		pointer-events: none;
+	}
+	#hope {
+		padding-bottom:0;
+	}
+	#hope input {
+		background-color: inherit;
+		width: 80%;
+		height: 100%;
+		margin-top:2%;
+		margin-bottom:-15%;
+		align-items: center;
+		text-align: center;
+		font-size:5vmin;
+		border:none;
+	}
+	#hopetable button {
+		color:lightgrey;
+		text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+		border: 1px solid;
+		border-radius:3px;
+		border-color: black;
+		font-weight: bold;
+		font-size:3vmin;
+		height: 100%;
+		width:100%;
+		background-color:transparent;
+	}
+	#hopetable button:hover {
+		box-shadow: 0 1px 10px 0 white, 0 1px 10px 0 white;
+	}
+	#hopetable button:active {
+	  transform: scaleY(1.01);
+	  transform: scaleX(1.02);
+	  box-shadow: 0 1px 10px 0 white, 0 1px 15px 0 white;
+	}
+	.TableVG {
+		background-color: sandybrown;
+	}
+	.TableVG th {
+		background-image: linear-gradient(178deg, orange 20%, bisque 99%);
+	}
+	.TableG {
+		background-color: crimson;
+	}
+	.TableG th {
+		background-image: linear-gradient(178deg, red 20%, bisque 99%);
+	}
+	.TableD {
+		background-color: lightskyblue;
+	}
+	.TableD th {
+		background-image: linear-gradient(178deg, skyblue 20%, blue 99%);
+	}
+	.TableM {
+		background: linear-gradient(180deg, black 21%, snow 22%);
+	}
+	.TableM th {
+		background-image: linear-gradient(180deg, lightgrey 2%, whitesmoke 20%, white 99%);
+	}
+	.TableSN {
+		background-color: Gold;
+	}
+	.TableSN th {
+		background-image: linear-gradient(178deg, yellow 20%, lightgoldenrodyellow 99%);
+	}
+	.TableC {
+		background-color: Antiquewhite;
+	}
+	.TableC th {
+		background-image: linear-gradient(178deg, lightgoldenrodyellow 20%, sandybrown 99%);
+	}
+	.TableSU {
+		background-color: lawngreen;
+	}
+	.TableSU th {
+		background-image: linear-gradient(178deg, yellow 20%, lightgreen 99%);
+	}
+	.TableSP {
+		background-color: Plum;
+	}
+	.TableSP th {
+		background-image: linear-gradient(178deg, lavender 20%, mediumorchid 99%);
+	}
+	.TableA {
+		background-color: cyan;
+	}
+	.TableA th {
+		background-image: linear-gradient(178deg, lavender 20%, mediumorchid 99%);
+	}
+	.Vanguard {
+		background-image: url("Vanguard.webp") !important;
+		background-position: 2% 50% !important;
+		background-size: 20% !important;
+		background-repeat: no-repeat !important;
+	}
+	.Guard {
+		background-image: url("Guard.webp") !important;
+		background-position: 2% 50% !important;
+		background-size: 20% !important;
+		background-repeat: no-repeat !important;
+	}
+	.Defender {
+		background-image: url("Defender.webp") !important;
+		background-position: 2% 50% !important;
+		background-size: 20% !important;
+		background-repeat: no-repeat !important;
+	}
+	.Medic {
+		background-image: url("Medic.webp") !important;
+		background-position: 2% 50% !important;
+		background-size: 20% !important;
+		background-repeat: no-repeat !important;
+	}
+	.Sniper {
+		background-image: url("Sniper.webp") !important;
+		background-position: 2% 50% !important;
+		background-size: 20% !important;
+		background-repeat: no-repeat !important;
+	}
+	.Caster {
+		background-image: url("Caster.webp") !important;
+		background-position: 2% 50% !important;
+		background-size: 20% !important;
+		background-repeat: no-repeat !important;
+	}
+	.Supporter {
+		background-image: url("Supporter.webp") !important;
+		background-position: 2% 50% !important;
+		background-size: 20% !important;
+		background-repeat: no-repeat !important;
+	}
+	.Specialist {
+		background-image: url("Specialist.webp") !important;
+		background-position: 2% 50% !important;
+		background-size: 20% !important;
+		background-repeat: no-repeat !important;
+	}
+	/* The below are background changes for the array
+	By assigning the consistent styling to the ID instead of class, you minimise duplication*/
+	.Hope0 {
+		background-image: linear-gradient(to bottom, 
+			black 29%,darkred 39%, brown 42%, black 50%);
+	}
+	.Hope1 {
+		background-image: linear-gradient(to bottom, 
+			black 15%, #191946 29%, darkred 39%, brown 42%, black 60%);
+	}
+	.Hope2 {
+		background-image: linear-gradient(to bottom, 
+			midnightblue 13%, steelblue 29%, skyblue 31%, white 31.5%, lightyellow 32%, yellow 33%, peru 36%, darkred 39%, brown 42%, black 65%);
+	}
+	.Hope3 {
+		background-image: linear-gradient(to bottom, 
+			steelblue 5%, skyblue 20%, white 25%, lightyellow 30%, yellow 32%, gold 34%, goldenrod 36%, darkgoldenrod 40%, indianred 44%, brown 60%, black 60%);
+	}
+	.Hope4 {
+		background-image: linear-gradient(to bottom, 
+			steelblue 1%, skyblue 5%, white 25%, lightyellow 30%, yellow 40%, gold 44%, goldenrod 47%, indianred 60%, brown 64%, black 78%);
+	}
+	.Hope5 {
+		background-image: linear-gradient(to bottom, 
+			skyblue 7%, white 35%, lightyellow 42%, yellow 47%,gold 50%, goldenrod 54%, lightpink 60%, brown 79%, black 96%);
+	}
+	.Hope6 {
+		background-image: linear-gradient(to bottom, 
+			skyblue 5%, white 33%, lightyellow 52%, yellow 56%, goldenrod 60%, lightpink 73%, brown 95%, black 99%);
+	}
+	.Hope7 {
+		background-image: linear-gradient(to bottom,
+			skyblue 2%, white 24%, white 43%, lightyellow 56%, yellow 60%, goldenrod 62%, lightpink 76%, brown 95%);
+	}
+	.Hope8 {
+		background-image: linear-gradient(to bottom,
+			lightskyblue 1%, white 20%, white 43%, lightyellow 63%, lightpink 82%, brown 99%);
+	}
+	.Hope9 {
+		background-image: linear-gradient(to bottom,
+			lightskyblue 1%, white 15%, white 53%, lightyellow 73%, lightpink 92%, pink 99%, brown 99.5%);
+	}
+	.Hope10 {
+		background-image: linear-gradient(to bottom,
+			lavender 1%,  white 11%, white 53%, lightyellow 83%, lightpink 97%, pink 99.5%, brown 99.9%);
+	}
+	.cycle {
+		margin-bottom:40%;
+	}
+	.cycle td {
+		float:left;
+		width:15%;
+		margin-top:-15%;
+		padding:15px;
+		table-layout:auto;
+	}
+	.cycle td button{
+		float:left;
+		color: maroon;
+		padding-left: 15px;
+		padding-right: 15px;
+		background-color: transparent;
+		border-color: black;
+		border-style: solid;
+		background-color:lightblue;
+		text-align: center;
+		border-radius: 10px;
+		font-size:14px;
+		width:200%;
+	}
+	</style>
