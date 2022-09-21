@@ -94,7 +94,7 @@ function HopeCheck() {
 		if (QQ === "Caster"){var Q = Caster}
 		if (QQ === "All"){var Q = All}
 		var z = (((((event.target).parentElement).parentElement).nextElementSibling).firstChild);
-		 z.className = QQ;
+
 		var A = (Q)[0].length;
 		var B = ((Q)[0].length + (Q)[1].length);
 		var C = ((Q)[0].length + (Q)[1].length + (Q)[2].length);
@@ -126,14 +126,14 @@ function HopeCheck() {
 			}
 		var index = (Q)[xt].indexOf(DD);
 		var index2 = (All)[xt].indexOf(DD);
-		var index3 = (Guard)[xt].indexOf(DD); var are = Guard;
-			if (index3 === -1){var index3 = (Sniper)[xt].indexOf(DD); var are = Sniper}
-			if (index3 === -1){var index3 = (Vanguard)[xt].indexOf(DD); var are = Vanguard}
-			if (index3 === -1){var index3 = (Defender)[xt].indexOf(DD); var are = Defender}
-			if (index3 === -1){var index3 = (Medic)[xt].indexOf(DD); var are = Medic}
-			if (index3 === -1){var index3 = (Caster)[xt].indexOf(DD); var are = Caster}
-			if (index3 === -1){var index3 = (Specialist)[xt].indexOf(DD); var are = Specialist}
-			if (index3 === -1){var index3 = (Supporter)[xt].indexOf(DD); var are = Supporter}
+		var index3 = (Guard)[xt].indexOf(DD); var are = Guard; var EZ = "Guard";
+			if (index3 === -1){var index3 = (Sniper)[xt].indexOf(DD); var are = Sniper; var EZ = "Sniper"}
+			if (index3 === -1){var index3 = (Vanguard)[xt].indexOf(DD); var are = Vanguard; var EZ = "Vanguard";}
+			if (index3 === -1){var index3 = (Defender)[xt].indexOf(DD); var are = Defender; var EZ = "Defender"}
+			if (index3 === -1){var index3 = (Medic)[xt].indexOf(DD); var are = Medic; var EZ = "Medic"}
+			if (index3 === -1){var index3 = (Caster)[xt].indexOf(DD); var are = Caster; var EZ = "Caster"}
+			if (index3 === -1){var index3 = (Specialist)[xt].indexOf(DD); var are = Specialist; var EZ = "Specialist"}
+			if (index3 === -1){var index3 = (Supporter)[xt].indexOf(DD); var are = Supporter; var EZ = "Supporter"}
 			if ((index !== -1) && ((DD!="Reserve Op: Melee")&&(DD!="Reserve Op: Ranged")&&(DD!="Reserve Medic"))) {
 					(Q)[xt].splice(index, 1);
 					}
@@ -144,6 +144,7 @@ function HopeCheck() {
 					(are)[xt].splice(index3, 1);
 					}
 		if (index != -1){
+					 z.className = EZ;
 		return 'Results: ' + DD;} else {return "Out of Operators!"}
 		}			
 const Defender = [];
