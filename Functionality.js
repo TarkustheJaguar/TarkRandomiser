@@ -145,7 +145,7 @@ function HopeCheck() {
 					}
 		if (index != -1){
 					 z.className = EZ;
-		return 'Results: ' + DD;} else {return "Out of Operators!"}
+		return 'Result: ' + DD;} else {return "Out of Operators!"}
 		}			
 const Defender = [];
 const Guard = [];
