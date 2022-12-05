@@ -106,11 +106,15 @@
 	}
 	#Jarg{
 		margin-left:70%;
-
 	}
 	#john {
 		position:absolute;
-		margin-left:10%;
+		margin-left:2%;
+		margin-top:1%;
+		overflow-y:scroll;
+		width: 18%;
+		height:15%;
+		display: flex;
 	}
 	.Result {
 		clear: both;
@@ -121,7 +125,6 @@
 		float: left;
 		width:70%;
 		height: 20%;
-
 	}
 	.Result td {
 		margin-top:4%;
