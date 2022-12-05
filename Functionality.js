@@ -189,7 +189,7 @@ function TestRest(){
 			Vanguard[3] = ["Bagpipe", "Saileach", "Siege", "Flametail", "Saga"];
 			Sniper[0] = ["'Justice Knight'", "Rangers","Kroos","Adnachiel","Catapult"];
 			Sniper[1] = ["Jessica","Meteor","Vermeil","May","Ambriel","Pinecone","Aciddrop","Shirayuki"];
-			Sniper[2] = ["Kroos (KG)","GreyThroat","April","Executor","Platinum","Blue Poison","Sesa","Firewatch","Andreana","Aosta","Provence","Toddifons","Meteorite"];
+			Sniper[2] = ["Kroos (KG)","GreyThroat","April","Executor","Platinum","Blue Poison","Sesa","Firewatch","Andreana","Aosta","Provence","Toddifons","Meteorite","Erato"];
 			Sniper[3] = ["Exusiai","Archetto","Ash","W","Fartooth","Ch'en (H)","Schwarz","Rosa","Rosmontis","Fiametta"];
 			Medic[0] = ["Lancet-2","Hibiscus","Ansel"];
 			Medic[1] = ["Perfumer", "Sussurro", "Myrrh","Purestream","Gavial"];
@@ -310,3 +310,4 @@ function HopeCycle(){
 //Cleaned up a lot of the CSS overlap and errors
 //Simplified reroll process to be more efficient
 //Fixed SOME of the issues with regards to other resolutions
+//Added up to Erato. Added scrollbar and toggle for resets.
