@@ -46,19 +46,28 @@ function disB() {
 		var show = 5;
 function disRB() {
     var x = event.target;
-        if(x.innerHTML != "Roll"){
+    if(x.innerHTML != "Roll"){
 	var z = (((((event.target).parentElement).parentElement).nextElementSibling).firstChild);
 	var g = document.getElementById('john');
 	var c = parseInt(document.getElementById('falsify').innerText);
 	var st = z.innerHTML.split(': ')[1];
-	if ((c < show) && (z.innerText != "Out of Operators!")) {arr.push(st);
-			g.innerText = (arr.join('\n'));}
-	if (z.innerText != "Out of Operators!"){
-	document.getElementById('falsify').innerText = (c)+1;}
-	if ((c >= show) && (z.innerText != "Out of Operators!")) {arr.push(st);
-		arr.shift();
-		g.innerText = (arr.join('\n'))}
+	var ShowRerolls = document.querySelector('#ScrollReset');
+		if ((z.innerText != "Out of Operators!")) {arr.push(st);
+			g.innerText = (arr.join('\n'));
+		document.getElementById('falsify').innerText = (c)+1;
+	// Show 5 vs show all - setting to show 5 will delete previous.
+			if (ShowRerolls.checked != true){
+				while (arr.length > 5){
+					arr.shift();
+				}
+			}
+			if (c > 4){
+				g.style.flexDirection = "column-reverse";
+			}
+			// ABOVE - sets scroll to scroll down once 5 operators reached automatically
+			g.innerText = (arr.join('\n'));
 		}
+	}
 	x.innerText = 'Reroll...'
     }
 //This is my array for 'Hope' Background change!! FULLY OPERATIONAL
