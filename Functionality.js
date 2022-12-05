@@ -43,7 +43,6 @@ function disB() {
 }
 // Both commands let one button unlock the other, and lock itself
 		const arr = [];
-		var show = 5;
 function disRB() {
     var x = event.target;
     if(x.innerHTML != "Roll"){
