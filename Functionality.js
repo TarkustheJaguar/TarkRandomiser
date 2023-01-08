@@ -56,12 +56,15 @@ function disRB() {
 		document.getElementById('falsify').innerText = (c)+1;
 	// Show 5 vs show all - setting to show 5 will delete previous.
 			if (ShowRerolls.checked != true){
+				g.style.overflowY = "hidden";
+				g.style.flexDirection = "column";
 				while (arr.length > 5){
 					arr.shift();
 				}
 			}
-			if (c > 4){
+			else if (c > 4){
 				g.style.flexDirection = "column-reverse";
+				g.style.overflowY = "scroll";
 			}
 			// ABOVE - sets scroll to scroll down once 5 operators reached automatically
 			g.innerText = (arr.join('\n'));
@@ -177,7 +180,7 @@ function TestRest(){
 	All.length = 0;
 			Defender[0] = ["Noir Corne", "Beagle", "Cardigan", "Spot"];	
 			Defender[1] = ["Cuora", "Dur-nar", "Bubble", "Gummy", "Matterhorn"];
-			Defender[2] = ["Liskarm", "Vulcan", "Aurora", "Nearl", "Asbestos", "Ashlock", "Shalem", "Croissant", "Bison", "Blitz", "Heavyrain", "Hung"];
+			Defender[2] = ["Liskarm", "Vulcan", "Aurora", "Nearl", "Asbestos", "Ashlock", "Shalem", "Croissant", "Bison", "Blitz", "Heavyrain", "Hung", "Czerny"];
 			Defender[3] = ["Nian", "Hoshiguma", "Saria", "Mudrock", "Blemishine", "Eunectes"];
 			Guard[0] = ["Castle-3","Melantha", "Popukar", "Midnight"];	
 			Guard[1] = ["Matoimaru", "Cutter", "Conviction", "Estelle", "Utage", "Frostleaf", "Beehunter", "Jackie", "Mousse", "Arene", "Dobermann"];
@@ -193,7 +196,7 @@ function TestRest(){
 			Sniper[3] = ["Exusiai","Archetto","Ash","W","Fartooth","Ch'en (H)","Schwarz","Rosa","Rosmontis","Fiametta"];
 			Medic[0] = ["Lancet-2","Hibiscus","Ansel"];
 			Medic[1] = ["Perfumer", "Sussurro", "Myrrh","Purestream","Gavial"];
-			Medic[2] = ["Warfarin","Ptilopsis","Breeze","Ceylon","Tuye","Mulberry","Folinic","Silence","Whisperain","Honeyberry"];
+			Medic[2] = ["Warfarin","Ptilopsis","Breeze","Ceylon","Tuye","Mulberry","Folinic","Silence","Whisperain","Honeyberry", "Hibiscus (Purifier)"];
 			Medic[3] = ["Kal'tsit","Nightingale","Shining"];
 			Specialist[0] = ["THRM-EX"];
 			Specialist[1] = ["Shaw","Ethan","Jaye","Rope","Gravel"];
@@ -206,7 +209,7 @@ function TestRest(){
 			Caster[0] = ["12F","Durin","Lava","Steward"];
 			Caster[1] = ["Click","Gitano","Haze","Indigo","Greyy","Pudding"];
 			Caster[2] = ["Leizi","Kjera","Skyfire","Iris","Lava (Purgatory)","Nightmare","Beeswax","Mint","Tomimi","Corroserum","Leonhardt","Amiya","Absinthe"];
-			Caster[3] = ["Ifrit","Ceobe","Dusk","Mostima","Eyjafjalla","Carnellian","Goldenglow","Passenger"];			
+			Caster[3] = ["Ifrit","Ceobe","Dusk","Mostima","Eyjafjalla","Carnellian","Goldenglow","Passenger", "Ebenholz"];			
 			All[0] = Guard[0].concat(Vanguard[0], Supporter[0], Sniper[0], Caster[0], Specialist[0], Defender[0], Medic[0]);
 			All[1] = Guard[1].concat(Vanguard[1], Supporter[1], Sniper[1], Caster[1], Specialist[1], Defender[1], Medic[1]);
 			All[2] = Guard[2].concat(Vanguard[2], Supporter[2], Sniper[2], Caster[2], Specialist[2], Defender[2], Medic[2]);
@@ -251,6 +254,8 @@ function ResetAB() {
 	document.getElementById('falsify').innerText = 0;
 	arr.length = 0;
 	document.getElementById('john').innerText = "";
+	document.getElementById('john').style.flexDirection = "column";
+	document.getElementById('john').style.overflow = "hidden";
 	document.getElementById("hopetable").style.display = "none";
 	document.getElementById("ISYAY").style.display = "block";
 }
@@ -311,3 +316,6 @@ function HopeCycle(){
 //Simplified reroll process to be more efficient
 //Fixed SOME of the issues with regards to other resolutions
 //Added up to Erato. Added scrollbar and toggle for resets.
+//Fixed 'reset' CSS issue. Reset now properly clears flex direction and scroll. 
+//Need to assign the above line to toggle show all as well!
+//Added Ebenholz, Hibiscus (Purifier) and Czerny
