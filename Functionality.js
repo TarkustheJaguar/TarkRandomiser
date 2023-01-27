@@ -25,12 +25,22 @@ function EnDisM(){
 function resetHope(){
 		document.getElementById('number').value = "6";
 	}
-//The 'ToggleTest' series changes which table is displayed, based on the Table ID and button text
+//Resets to 'Landing' table
 function ToggleTest2(){
-		var y = ((((((event.target).parentElement).parentElement).parentElement).parentElement).parentElement);
+		var y = document.getElementById("ClassDiv");
 			y.style.display = "none";
-		var x = document.getElementById(event.target.innerHTML);
-			x.style.display = "block";	
+		var z = document.getElementById("Landing");
+			z.style.display = "block";
+}
+//Changes Class Table to selection
+function ToggleReplace() {
+	var y = event.target.innerText;
+	var x = document.getElementById("ClassHead");
+	if (y != 'All'){x.innerText = y + 's';} else {x.innerText = y;}
+	var t = document.getElementById("ClassDiv");
+	document.getElementById("Landing").style.display = "none";
+	t.style.display = "block";
+	document.getElementById("ClassTable").className = "Table2 " + y + " Table4";
 }
 // Causes the 'Back' button to reset locked buttons, and rolled result
 function disB() {
@@ -47,7 +57,7 @@ function disRB() {
     var x = event.target;
     if(x.innerHTML != "Roll"){
 	var z = (((((event.target).parentElement).parentElement).nextElementSibling).firstChild);
-	var g = document.getElementById('john');
+	var g = document.getElementById('OperatorsRerolled');
 	var c = parseInt(document.getElementById('falsify').innerText);
 	var st = z.innerHTML.split(': ')[1];
 	var ShowRerolls = document.querySelector('#ScrollReset');
@@ -58,6 +68,7 @@ function disRB() {
 			if (ShowRerolls.checked != true){
 				g.style.overflowY = "hidden";
 				g.style.flexDirection = "column";
+				if (c > 4){ g.style.flexDirection = "column-reverse"}
 				while (arr.length > 5){
 					arr.shift();
 				}
@@ -94,15 +105,15 @@ function HopeCheck() {
 // UNIVERSAL Randomiser. Nested Successfully. 'QQ' returns results in quotations - if statements are workarounds
 	function randVal(){
 		var T = parseInt(document.getElementById('number').value, 10);
-		var QQ = (((((((event.target).parentElement).parentElement).parentElement).parentElement).parentElement.id));
-		if (QQ === "Defender"){var Q = Defender}
-		if (QQ === "Guard"){var Q = Guard}
-		if (QQ === "Vanguard"){var Q = Vanguard}
-		if (QQ === "Sniper"){var Q = Sniper}
-		if (QQ === "Medic"){var Q = Medic}
-		if (QQ === "Supporter"){var Q = Supporter}
-		if (QQ === "Specialist"){var Q = Specialist}
-		if (QQ === "Caster"){var Q = Caster}
+		var QQ = document.getElementById("ClassHead").innerText;
+		if (QQ === "Defenders"){var Q = Defender}
+		if (QQ === "Guards"){var Q = Guard}
+		if (QQ === "Vanguards"){var Q = Vanguard}
+		if (QQ === "Snipers"){var Q = Sniper}
+		if (QQ === "Medics"){var Q = Medic}
+		if (QQ === "Supporters"){var Q = Supporter}
+		if (QQ === "Specialists"){var Q = Specialist}
+		if (QQ === "Casters"){var Q = Caster}
 		if (QQ === "All"){var Q = All}
 		var z = (((((event.target).parentElement).parentElement).nextElementSibling).firstChild);
 
@@ -137,6 +148,7 @@ function HopeCheck() {
 			}
 		var index = (Q)[xt].indexOf(DD);
 		var index2 = (All)[xt].indexOf(DD);
+		//Defined again here so that 'All' will splice correctly. QQ would not work.
 		var index3 = (Guard)[xt].indexOf(DD); var are = Guard; var EZ = "Guard";
 			if (index3 === -1){var index3 = (Sniper)[xt].indexOf(DD); var are = Sniper; var EZ = "Sniper"}
 			if (index3 === -1){var index3 = (Vanguard)[xt].indexOf(DD); var are = Vanguard; var EZ = "Vanguard";}
@@ -155,7 +167,7 @@ function HopeCheck() {
 					(are)[xt].splice(index3, 1);
 					}
 		if (index != -1){
-					 z.className = EZ;
+					 z.className = EZ + "Roll";
 		return 'Result: ' + DD;} else {return "Out of Operators!"}
 		}			
 const Defender = [];
@@ -185,22 +197,22 @@ function TestRest(){
 			Guard[0] = ["Castle-3","Melantha", "Popukar", "Midnight"];	
 			Guard[1] = ["Matoimaru", "Cutter", "Conviction", "Estelle", "Utage", "Frostleaf", "Beehunter", "Jackie", "Mousse", "Arene", "Dobermann"];
 			Guard[2] = ["Specter", "Broca", "Savage", "La Pluma", "Lappland", "Franka", "Astesia", "Tequila", "Akafuyu", "Bibeak", "Swire", "Whislash", "Indra", "Amiya (G)", "Flint", "Ayerscarpe", "Tachanka", "Flamebringer", "Sideroca"];
-			Guard[3] = ["Blaze", "SilverAsh", "Surtr", "Thorns", "Mountain", "Skadi", "Hellagur", "Ch'en", "Nearl (TRK)", "Pallas"];
+			Guard[3] = ["Blaze", "SilverAsh", "Surtr", "Thorns", "Mountain", "Skadi", "Hellagur", "Ch'en", "Nearl (TRK)", "Pallas","Gavial (I)"];
 			Vanguard[0] = ["Yato", "Fang", "Plume", "Vanilla"];
 			Vanguard[1] = ["Vigna", "Beanstalk", "Scavenger", "Courier", "Myrtle"];
-			Vanguard[2] = ["Grani", "Reed", "Wildmane", "Blacknight", "Texas", "Zima", "Elysium", "Chiave"];
+			Vanguard[2] = ["Grani", "Reed", "Wildmane", "Blacknight", "Texas", "Zima", "Elysium", "Chiave","Cantabile"];
 			Vanguard[3] = ["Bagpipe", "Saileach", "Siege", "Flametail", "Saga"];
 			Sniper[0] = ["'Justice Knight'", "Rangers","Kroos","Adnachiel","Catapult"];
 			Sniper[1] = ["Jessica","Meteor","Vermeil","May","Ambriel","Pinecone","Aciddrop","Shirayuki"];
 			Sniper[2] = ["Kroos (KG)","GreyThroat","April","Executor","Platinum","Blue Poison","Sesa","Firewatch","Andreana","Aosta","Provence","Toddifons","Meteorite","Erato"];
-			Sniper[3] = ["Exusiai","Archetto","Ash","W","Fartooth","Ch'en (H)","Schwarz","Rosa","Rosmontis","Fiametta"];
+			Sniper[3] = ["Exusiai","Archetto","Ash","W","Fartooth","Ch'en (H)","Schwarz","Rosa","Rosmontis","Fiametta","Pozyomka"];
 			Medic[0] = ["Lancet-2","Hibiscus","Ansel"];
 			Medic[1] = ["Perfumer", "Sussurro", "Myrrh","Purestream","Gavial"];
-			Medic[2] = ["Warfarin","Ptilopsis","Breeze","Ceylon","Tuye","Mulberry","Folinic","Silence","Whisperain","Honeyberry", "Hibiscus (Purifier)"];
+			Medic[2] = ["Warfarin","Ptilopsis","Breeze","Ceylon","Tuye","Mulberry","Folinic","Silence","Whisperain","Honeyberry", "Hibiscus (P)"];
 			Medic[3] = ["Kal'tsit","Nightingale","Shining"];
 			Specialist[0] = ["THRM-EX"];
 			Specialist[1] = ["Shaw","Ethan","Jaye","Rope","Gravel"];
-			Specialist[2] = ["Projekt Red","Enforcer","Kafka","Manticore","Bena","Robin","KAZEMARU","Waai Fu","Cliffheart","FEater","Mr. Nothing","Snowsant","Frost","Kirara"];
+			Specialist[2] = ["Projekt Red","Enforcer","Kafka","Manticore","Bena","Robin","Kazemaru","Waai Fu","Cliffheart","FEater","Mr. Nothing","Snowsant","Frost","Kirara"];
 			Specialist[3] = ["Weedy","Gladiia","Lee","Phantom","Mizuki","Aak"]
 			Supporter[0] = ["Orchid"];
 			Supporter[1] = ["Deepcolor","Podenco","Earthspirit","Roberta"];
@@ -208,7 +220,7 @@ function TestRest(){
 			Supporter[3] = ["Angelina","Ling","Skadi (CH)","Suzuran","Magallan","Gnosis"];
 			Caster[0] = ["12F","Durin","Lava","Steward"];
 			Caster[1] = ["Click","Gitano","Haze","Indigo","Greyy","Pudding"];
-			Caster[2] = ["Leizi","Kjera","Skyfire","Iris","Lava (Purgatory)","Nightmare","Beeswax","Mint","Tomimi","Corroserum","Leonhardt","Amiya","Absinthe"];
+			Caster[2] = ["Leizi","Minimalist","Kjera","Skyfire","Iris","Lava (P)","Nightmare","Beeswax","Mint","Tomimi","Corroserum","Leonhardt","Amiya","Absinthe"];
 			Caster[3] = ["Ifrit","Ceobe","Dusk","Mostima","Eyjafjalla","Carnellian","Goldenglow","Passenger", "Ebenholz"];			
 			All[0] = Guard[0].concat(Vanguard[0], Supporter[0], Sniper[0], Caster[0], Specialist[0], Defender[0], Medic[0]);
 			All[1] = Guard[1].concat(Vanguard[1], Supporter[1], Sniper[1], Caster[1], Specialist[1], Defender[1], Medic[1]);
@@ -217,9 +229,9 @@ function TestRest(){
 }
 function accept(){
 	var toast = (((((event.target.parentElement).parentElement).previousElementSibling).firstChild));
-	var toast3 = (((((event.target.parentElement).parentElement).previousElementSibling).previousElementSibling.firstChild).firstChild);
-	var toast2 = (((((event.target.parentElement).parentElement).previousElementSibling).firstChild).innerHTML);
-	var success = toast2.split(': ')[1];
+	var rollButton = (((((event.target.parentElement).parentElement).previousElementSibling).previousElementSibling.firstChild).firstChild);
+	var displayedResult = (((((event.target.parentElement).parentElement).previousElementSibling).firstChild).innerHTML);
+	var success = displayedResult.split(': ')[1];
 		if (success != undefined){
 			document.getElementById(RR).innerText = success;
 			RR = 'r'+CN;
@@ -230,8 +242,7 @@ function accept(){
 			}
 			toast.innerHTML = " <br> ";
 			toast.className = "";
-			toast3.innerText = "Roll";
-		var crc = (((((event.target.parentElement).parentElement).previousElementSibling).previousElementSibling));
+			rollButton.innerText = "Roll";
 	}
 }
 var CN = 1;
@@ -239,23 +250,16 @@ var RR = "r1";
 function ResetAB() {
 	CN = 1;
 	RR = "r1";
-	document.getElementById("r1").innerText = "";
-	document.getElementById("r2").innerHTML = "";
-	document.getElementById("r3").innerHTML = "";
-	document.getElementById("r4").innerHTML = "";
-	document.getElementById("r5").innerHTML = "";
-	document.getElementById("r6").innerHTML = "";
-	document.getElementById("r7").innerHTML = "";
-	document.getElementById("r8").innerHTML = "";
-	document.getElementById("r9").innerHTML = "";
-	document.getElementById("r10").innerHTML = "";
-	document.getElementById("r11").innerHTML = "";
-	document.getElementById("r12").innerHTML = "";
+	document.getElementById("ISToggle").innerText = "Enable IS";
+	for (i = 1; i < 13; i += 1){
+		var resetCount = "r" + i;
+		document.getElementById(resetCount).innerText = "";
+	}
 	document.getElementById('falsify').innerText = 0;
 	arr.length = 0;
-	document.getElementById('john').innerText = "";
-	document.getElementById('john').style.flexDirection = "column";
-	document.getElementById('john').style.overflow = "hidden";
+	document.getElementById('OperatorsRerolled').innerText = "";
+	document.getElementById('OperatorsRerolled').style.flexDirection = "column";
+	document.getElementById('OperatorsRerolled').style.overflow = "hidden";
 	document.getElementById("hopetable").style.display = "none";
 	document.getElementById("ISYAY").style.display = "block";
 }
@@ -281,13 +285,13 @@ function AddIS(){
 			var ra3 = All[0].indexOf("Reserve Medic");
 			if (ra3 != -1){All[0].splice(ra3, 1)};
 			i++;}
-		document.getElementById("jeg").innerText = "Enable IS";
+		document.getElementById("ISToggle").innerText = "Enable IS";
 	} else {
 	Guard[0].push("Reserve Op: Melee"), Vanguard[0].push("Reserve Op: Melee"), Specialist[0].push("Reserve Op: Melee");
 	Defender[0].push("Reserve Op: Melee"), Medic[0].push("Reserve Medic"),Supporter[0].push("Reserve Op: Ranged");
 	Sniper[0].push("Reserve Op: Ranged"), Caster[0].push("Reserve Op: Ranged");
 	All[0].push("Reserve Op: Melee", "Reserve Op: Ranged", "Reserve Medic");
-	document.getElementById("jeg").innerText = "Disable IS";
+	document.getElementById("ISToggle").innerText = "Disable IS";
 	}
 	var jor = (document.getElementById("hopetable"));
 	if (jor.style.display === "none"){jor.style.display = "block";}
@@ -297,12 +301,12 @@ function AddIS(){
 	else {bruhs.style.display = "none";}
 }
 function HopeCycle(){
-	var arrrr = event.target.innerText;
-	if(arrrr === '6*'){var Corre = "6";}
-	if(arrrr === '5*'){var Corre = "3";}
-	if(arrrr === '4*'){var Corre = "2";}
-	if(arrrr === '3*'){var Corre = "0";}
-	document.getElementById("number").value = Corre;
+	var Rarity = event.target.innerText;
+	if(Rarity === '6*'){var HopeCost = "6";}
+	if(Rarity === '5*'){var HopeCost = "3";}
+	if(Rarity === '4*'){var HopeCost = "2";}
+	if(Rarity === '3*'){var HopeCost = "0";}
+	document.getElementById("number").value = HopeCost;
 	HopeCheck();
 }
 //Change log:
@@ -315,7 +319,14 @@ function HopeCycle(){
 //Cleaned up a lot of the CSS overlap and errors
 //Simplified reroll process to be more efficient
 //Fixed SOME of the issues with regards to other resolutions
-//Added up to Erato. Added scrollbar and toggle for resets.
+//Added up to Pozyomka. Added scrollbar and toggle for resets.
 //Fixed 'reset' CSS issue. Reset now properly clears flex direction and scroll. 
 //Need to assign the above line to toggle show all as well!
-//Added Ebenholz, Hibiscus (Purifier) and Czerny
+//Fixed a formatting issue to ensure most recent result is fully visible when 'display all' is false.
+//Renamed some variables to provide ease of readibility.
+//'Reset' now correctly resets the text in 'Enable IS'
+//Class tables reduced to a single table. Heading/CSS changed on initial click. Variables renamed for readability.
+//CSS and HTML elements renamed to facilitate reduction from 10 tables to 2.
+//Cleared up reset using a 'for' loop. Currently only 12 operators can be selected.
+//Might be worth shifting all rolled operators into a list similar to reroll list for convenience - depending on 'card' mechanic
+// ^ if added.
