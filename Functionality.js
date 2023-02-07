@@ -1,36 +1,36 @@
 // This command increases 'Hope' value
 function incrementValue(){
-		var value = parseInt(document.getElementById('number').value, 10);
-		value = isNaN(value) ? 0 : value;
-		value++;
-		document.getElementById('number').value = value;
+	var value = parseInt(document.getElementById('number').value, 10);
+	value = isNaN(value) ? 0 : value;
+	value++;
+	document.getElementById('number').value = value;
 }
 // This command decreases 'Hope' value
 function decrementValue(){
-		var value = parseInt(document.getElementById('number').value, 10);
-		value = isNaN(value) ? 0 : value;
-		value--;
-		document.getElementById('number').value = value;
+	var value = parseInt(document.getElementById('number').value, 10);
+	value = isNaN(value) ? 0 : value;
+	value--;
+	document.getElementById('number').value = value;
 }
 // This command disables the '-1' button when Hope hits 0, and re-enables when it goes up
 function EnDisM(){
-		var button = document.getElementById('minus');
-		if ((parseInt(document.getElementById('number').value, 10) > "0")) {
-			button.disabled = false;
-		} else {
-			button.disabled = true;
-		}
+	var button = document.getElementById('minus');
+	if ((parseInt(document.getElementById('number').value, 10) > "0")) {
+		button.disabled = false;
+	} else {
+		button.disabled = true;
+	}
 }
 // This command sets 'Hope' value to 6. Used by 'reset' button
 function resetHope(){
-		document.getElementById('number').value = "6";
+	document.getElementById('number').value = "6";
 	}
 //Resets to 'Landing' table
 function ToggleTest2(){
-		var y = document.getElementById("ClassDiv");
-			y.style.display = "none";
-		var z = document.getElementById("Landing");
-			z.style.display = "block";
+	var y = document.getElementById("ClassDiv");
+		y.style.display = "none";
+	var z = document.getElementById("Landing");
+		z.style.display = "block";
 }
 //Changes Class Table to selection
 function ToggleReplace() {
@@ -52,7 +52,7 @@ function disB() {
 		d.className = "blank";
 }
 // Both commands let one button unlock the other, and lock itself
-		const arr = [];
+const arr = [];
 function disRB() {
     var x = event.target;
     if(x.innerHTML != "Roll"){
@@ -103,73 +103,115 @@ function HopeCheck() {
 			HT[9] = "Hope9";
 			HT[10] = "Hope10";
 // UNIVERSAL Randomiser. Nested Successfully. 'QQ' returns results in quotations - if statements are workarounds
-	function randVal(){
-		var T = parseInt(document.getElementById('number').value, 10);
-		var QQ = document.getElementById("ClassHead").innerText;
-		if (QQ === "Defenders"){var Q = Defender}
-		if (QQ === "Guards"){var Q = Guard}
-		if (QQ === "Vanguards"){var Q = Vanguard}
-		if (QQ === "Snipers"){var Q = Sniper}
-		if (QQ === "Medics"){var Q = Medic}
-		if (QQ === "Supporters"){var Q = Supporter}
-		if (QQ === "Specialists"){var Q = Specialist}
-		if (QQ === "Casters"){var Q = Caster}
-		if (QQ === "All"){var Q = All}
-		var z = (((((event.target).parentElement).parentElement).nextElementSibling).firstChild);
-
-		var A = (Q)[0].length;
-		var B = ((Q)[0].length + (Q)[1].length);
-		var C = ((Q)[0].length + (Q)[1].length + (Q)[2].length);
-			if (T < 2){
-				var c = Math.floor ((Math.random()) * (A));
-				var xt = 0;
-				var DD = (Q).flat()[c];						
-			}
-			else if (T === 2){
-				var c = Math.floor ((Math.random()) * (B));
-				if (c > (A - 1)){ var xt = 1}
-				else {var xt = 0}
-				var DD = (Q).flat()[c];
-			}
-			else if ((T > 2) && (T < 6)){
-				var c = Math.floor ((Math.random()) * (C));
-				if (c > (B - 1)){ var xt = 2}
-				else if (c > (A - 1)){ var xt = 1}
-				else {var xt = 0}
-				var DD = (Q).flat()[c];
-			}
-			else if (T > 5){
-				var c = Math.floor ((Math.random()) * (((Q).flat()).length));
-				if (c > (C - 1)){ var xt = 3}
-				else if (c > (B - 1)){ var xt = 2}
-				else if (c > (A - 1)){ var xt = 1}
-				else {var xt = 0}
-				var DD = (Q).flat()[c];
-			}
-		var index = (Q)[xt].indexOf(DD);
-		var index2 = (All)[xt].indexOf(DD);
-		//Defined again here so that 'All' will splice correctly. QQ would not work.
-		var index3 = (Guard)[xt].indexOf(DD); var are = Guard; var EZ = "Guard";
-			if (index3 === -1){var index3 = (Sniper)[xt].indexOf(DD); var are = Sniper; var EZ = "Sniper"}
-			if (index3 === -1){var index3 = (Vanguard)[xt].indexOf(DD); var are = Vanguard; var EZ = "Vanguard";}
-			if (index3 === -1){var index3 = (Defender)[xt].indexOf(DD); var are = Defender; var EZ = "Defender"}
-			if (index3 === -1){var index3 = (Medic)[xt].indexOf(DD); var are = Medic; var EZ = "Medic"}
-			if (index3 === -1){var index3 = (Caster)[xt].indexOf(DD); var are = Caster; var EZ = "Caster"}
-			if (index3 === -1){var index3 = (Specialist)[xt].indexOf(DD); var are = Specialist; var EZ = "Specialist"}
-			if (index3 === -1){var index3 = (Supporter)[xt].indexOf(DD); var are = Supporter; var EZ = "Supporter"}
-			if ((index !== -1) && ((DD!="Reserve Op: Melee")&&(DD!="Reserve Op: Ranged")&&(DD!="Reserve Medic"))) {
-					(Q)[xt].splice(index, 1);
-					}
-			if ((index2 !== -1) && ((DD!="Reserve Op: Melee")&&(DD!="Reserve Op: Ranged")&&(DD!="Reserve Medic"))&&(Q != All)){
-					(All)[xt].splice(index2, 1);
-					}
-			if ((index3 !== -1) && ((DD!="Reserve Op: Melee")&&(DD!="Reserve Op: Ranged")&&(DD!="Reserve Medic"))&&(Q === (All))){
-					(are)[xt].splice(index3, 1);
-					}
-		if (index != -1){
-					 z.className = EZ + "Roll";
-		return 'Result: ' + DD;} else {return "Out of Operators!"}
-		}			
+function randVal(){
+	var T = parseInt(document.getElementById('number').value, 10);
+	var QQ = document.getElementById("ClassHead").innerText;
+	if (QQ === "Defenders"){var Q = Defender}
+	if (QQ === "Guards"){var Q = Guard}
+	if (QQ === "Vanguards"){var Q = Vanguard}
+	if (QQ === "Snipers"){var Q = Sniper}
+	if (QQ === "Medics"){var Q = Medic}
+	if (QQ === "Supporters"){var Q = Supporter}
+	if (QQ === "Specialists"){var Q = Specialist}
+	if (QQ === "Casters"){var Q = Caster}
+	if (QQ === "All"){var Q = All}
+	var z = (((((event.target).parentElement).parentElement).nextElementSibling).firstChild);
+	var A = (Q)[0].length;
+	var B = ((Q)[0].length + (Q)[1].length);
+	var C = ((Q)[0].length + (Q)[1].length + (Q)[2].length);
+		if (T < 2){
+			var c = Math.floor ((Math.random()) * (A));
+			var xt = 0;
+			var DD = (Q).flat()[c];						
+		}
+		else if (T === 2){
+			var c = Math.floor ((Math.random()) * (B));
+			if (c > (A - 1)){ var xt = 1}
+			else {var xt = 0}
+			var DD = (Q).flat()[c];
+		}
+		else if ((T > 2) && (T < 6)){
+			var c = Math.floor ((Math.random()) * (C));
+			if (c > (B - 1)){ var xt = 2}
+			else if (c > (A - 1)){ var xt = 1}
+			else {var xt = 0}
+			var DD = (Q).flat()[c];
+		}
+		else if (T > 5){
+			var c = Math.floor ((Math.random()) * (((Q).flat()).length));
+			if (c > (C - 1)){ var xt = 3}
+			else if (c > (B - 1)){ var xt = 2}
+			else if (c > (A - 1)){ var xt = 1}
+			else {var xt = 0}
+			var DD = (Q).flat()[c];
+		}
+	const qr =[]; //Actual result can appear in fake results
+	if(arcticImplement != 5){
+		for (i = 0; i < Q.length; i++){
+			qr[i] = Q[i];
+		}
+		qr.push(DD);
+	}
+	var index = (Q)[xt].indexOf(DD);
+	var index2 = (All)[xt].indexOf(DD);
+	var index3 = (Guard)[xt].indexOf(DD); var are = Guard; var EZ = "Guard";
+		if (index3 === -1){var index3 = (Sniper)[xt].indexOf(DD); var are = Sniper; var EZ = "Sniper"}
+		if (index3 === -1){var index3 = (Vanguard)[xt].indexOf(DD); var are = Vanguard; var EZ = "Vanguard";}
+		if (index3 === -1){var index3 = (Defender)[xt].indexOf(DD); var are = Defender; var EZ = "Defender"}
+		if (index3 === -1){var index3 = (Medic)[xt].indexOf(DD); var are = Medic; var EZ = "Medic"}
+		if (index3 === -1){var index3 = (Caster)[xt].indexOf(DD); var are = Caster; var EZ = "Caster"}
+		if (index3 === -1){var index3 = (Specialist)[xt].indexOf(DD); var are = Specialist; var EZ = "Specialist"}
+		if (index3 === -1){var index3 = (Supporter)[xt].indexOf(DD); var are = Supporter; var EZ = "Supporter"}
+		if ((index !== -1) && ((DD!="Reserve Op: Melee")&&(DD!="Reserve Op: Ranged")&&(DD!="Reserve Medic"))) {
+				(Q)[xt].splice(index, 1);
+		}
+		if ((index2 !== -1) && ((DD!="Reserve Op: Melee")&&(DD!="Reserve Op: Ranged")&&(DD!="Reserve Medic"))&&(Q != All)){
+				(All)[xt].splice(index2, 1);
+		}
+		if ((index3 !== -1) && ((DD!="Reserve Op: Melee")&&(DD!="Reserve Op: Ranged")&&(DD!="Reserve Medic"))&&(Q === (All))){
+				(are)[xt].splice(index3, 1);
+		}
+				
+//The below will be a test of 'fake results' similar to a dice roll. Intend to eventually make like a slot machine	
+//Uses 'arcticImplement' for enable/disable. 0 enable, 5 disable.
+	var hMF = 11; //'How Many Fakes' - should be equal to timings.length
+	if ((arcticImplement != 5) && (((Q).flat()).length >= 1) && ((((Q)[xt].flat()).length) > (0))){
+		const timings = [20,50,70,100,150,210,280,370,440,580,800];
+		for (fO = 0; fO < (hMF); fO += 1){
+			var fakeOut = setTimeout(FakeResDisplay, (timings[fO]))}				
+	}
+	var cntFR = 0; //Displays 'fakes'
+	var secondCNT = 0; //Generates 'fakes'
+	const arrayfakeres = []; //Stores 'fakes' and real roll
+	while (secondCNT < (hMF - 1)){
+		if ((((Q).flat()).length >= 1) &&(((Q)[xt].flat()).length) > (0)){
+			var fakeGen = (qr).flat()[(Math.floor ((Math.random()) * (((qr).flat()).length)))];
+			arrayfakeres.push(("Result: ") + fakeGen);}
+		secondCNT++;
+	}
+	if (((Q).flat()).length >= 1){
+		arrayfakeres.push("Result: " + DD);
+	}
+	function FakeResDisplay() {
+		var fakeTarget = (document.getElementById('resetRoll'));
+		var useFR = arrayfakeres[cntFR];
+		fakeTarget.innerHTML = (useFR);
+		cntFR++;
+		if (cntFR == (hMF)){
+			//Use this to visually change result and unlock roll button, change to classes
+			//Then implement the ability to disable
+			fakeTarget.style = "color: crimson";z.className = EZ + "Roll";	} else {fakeTarget.style = "color: maroon";}
+	}
+	if (index != -1){
+		var cc = z.className;
+			if(z.classList != ""){
+				z.classList.remove(cc);}
+		z.style = "color: maroon";
+		if ((arcticImplement !=5) && (((Q).flat()).length >= 1) && (((Q)[xt].flat()).length) > (0)){
+			return (arrayfakeres[0]);}
+		else {z.className = EZ + "Roll";z.style = "color: crimson";return ("Result: " + DD)}
+	} else {z.className = "";return "Out of Operators!"}
+}
 const Defender = [];
 const Guard = [];
 const Vanguard = [];
@@ -245,6 +287,13 @@ function accept(){
 			rollButton.innerText = "Roll";
 	}
 }
+var arcticImplement = 0; 
+//Used to enable/disable animations. Currently only animation is the 'fake results'.
+function toggleSpin(){
+	var togSpin = document.getElementById("toggleSpin");
+	if(togSpin.innerText == "Animations Enabled"){arcticImplement = 5; togSpin.innerText = "Animations Disabled"}
+	else{arcticImplement = 0; togSpin.innerText = "Animations Enabled"}
+}
 var CN = 1;
 var RR = "r1";
 function ResetAB() {
@@ -314,14 +363,14 @@ function HopeCycle(){
 //Set default to IS (OFF)
 //Added 'out of operators' condition
 //Added ResetAB() - which removes stored results and resets to zero. Added to reset button.
-//ResetAB() also resets reroll result array, and incremented number.
+//ResetAB() also resets reroll result array, and resets incremented number.
 //Added HopeCycle() to directly set rarity. Very WIP styling. Eventually hide all the default IS hope stuff.
 //Cleaned up a lot of the CSS overlap and errors
 //Simplified reroll process to be more efficient
 //Fixed SOME of the issues with regards to other resolutions
 //Added up to Pozyomka. Added scrollbar and toggle for resets.
 //Fixed 'reset' CSS issue. Reset now properly clears flex direction and scroll. 
-//Need to assign the above line to toggle show all as well!
+//Need to assign the above line to toggle show all as well!**********
 //Fixed a formatting issue to ensure most recent result is fully visible when 'display all' is false.
 //Renamed some variables to provide ease of readibility.
 //'Reset' now correctly resets the text in 'Enable IS'
@@ -329,4 +378,6 @@ function HopeCycle(){
 //CSS and HTML elements renamed to facilitate reduction from 10 tables to 2.
 //Cleared up reset using a 'for' loop. Currently only 12 operators can be selected.
 //Might be worth shifting all rolled operators into a list similar to reroll list for convenience - depending on 'card' mechanic
-// ^ if added.
+//Implemented randomised 'fake' rolls that display prior to actual result. Intend to lock out reroll and add animation for this.
+//Added ability to disable fake results - will be used to disable ALL animations as they are added.
+//Fake results now function at different 'Hope' values, and can display actual result in fake displays.
