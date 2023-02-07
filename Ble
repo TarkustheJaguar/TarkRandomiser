@@ -1,0 +1,193 @@
+<html>
+<!--
+<head>
+<link href="style.css" rel="Stylesheet" type="text/css"/>
+<script type="text/javascript" src="function.js"></script>
+<img src="WIPtile.png" id="tile" hidden>
+<img src="Blemblem.png" id="Blemblem" hidden>
+<img src="Dark.png" id="dark" hidden>
+<img src="Dark2.png" id="dark2" hidden>
+</head>
+<body onload="startGame()">
+</body>
+<style>
+canvas {
+position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin:auto;
+}
+</style>
+
+
+
+var myObstacles = [];
+var score = 0;
+function startGame() {
+  myGameArea.start();
+  Background = new component(560, 560, "tile", 0, 0, 0, 0, 256, 256);
+  blemishine = new component(64, 64, "Blemblem", 192, 192, 0, 0, 86, 86);
+  myBlemiChibi = new component(86, 86, "Blemblem", 0, 362, 0, 0, 86, 86);
+  myScore = new component("30px", "Consolas", "black", 280, 40,0,0,0,0, "text");
+}
+// NOTE: component (Width, Height, Image Ref, Distance(Left), Distance(Top), image(L), image(T), width, height)
+var myGameArea = {
+  canvas : document.createElement("canvas"),
+  start : function() {
+    this.canvas.width = 448;
+    this.canvas.height = 448;
+    this.context = this.canvas.getContext("2d");
+    document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+	this.frameNo = 0;
+	this.interval = setInterval(updateGameArea, 20);
+	window.addEventListener('keydown', function (e) {
+      myGameArea.keys = (myGameArea.keys || []);
+      myGameArea.keys[e.keyCode] = true;
+    })
+    window.addEventListener('keyup', function (e) {
+      myGameArea.keys[e.keyCode] = false;
+    })
+  },
+    clear : function() {
+    this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+  },
+  stop : function() {
+    clearInterval(this.interval);
+  }
+}
+function everyinterval(n) {
+  if ((myGameArea.frameNo / n) % 1 == 0) {return true;}
+  return false;
+}
+function component(width, height, image, x, y, srcx, srcy, srcwidth, srcheight, type, path) {
+  this.type = type;
+  this.width = width;
+  this.height = height;
+  this.speedX = 0;
+  this.speedY = 0;
+  this.image = image;
+  this.x = x;
+  this.y = y;
+  this.srcx = (0 + srcx);
+  this.srcy = (0 + srcy);
+  this.srcwidth = ((64 + srcwidth));
+  this.srcheight = ((64 + srcheight));
+  this.path = path;
+  this.update = function(){
+  ctx = myGameArea.context;
+  if (this.type == "text") {
+      ctx.font = this.width + " " + this.height;
+      ctx.fillStyle = image;
+      ctx.fillText(this.text, this.x, this.y);
+    } else {
+  var img = document.getElementById(image);
+  ctx.drawImage(img,this.srcx,this.srcy,this.srcwidth,this.srcheight,this.x, this.y, this.width, this.height);
+  }}
+  this.newPos = function() {
+    this.x += this.speedX;
+    this.y += this.speedY;
+	if(COUNTER != 0 && this.x <210 && this.x >170){this.x = 192};
+	this.hitWall();
+  }
+  this.crashWith = function(otherobj) {
+    var myleft = this.x;
+    var myright = this.x + (this.width);
+    var mytop = this.y;
+    var mybottom = this.y + (this.height);
+    var otherleft = otherobj.x;
+    var otherright = otherobj.x + (otherobj.width);
+    var othertop = otherobj.y;
+    var otherbottom = otherobj.y + (otherobj.height);
+    var crash = true;
+    if ((mybottom < othertop) ||
+		(mytop > otherbottom) ||
+		(myright < otherleft) ||
+		(myleft > otherright)) {
+		crash = false;
+		}
+    return crash;
+  }
+  this.hitWall = function() {
+        rockbottom = myGameArea.canvas.height - this.height;
+		abstop = 0 ;
+		lefstop = 0 ;
+		rightstop = myGameArea.canvas.width - this.width;  
+		if (this.x < lefstop){
+			this.x = lefstop;
+			}
+		if (this.x > rightstop){
+			this.x = rightstop;
+			}
+		if (this.y < abstop){
+			this.y = abstop;
+			}
+        if (this.y > rockbottom) {
+            this.y = rockbottom;
+        }
+    }
+}
+var COUNTER = 0;
+function updateGameArea() {
+	var x, y;	  
+  for (i = 0; i < myObstacles.length; i += 1) {
+    if (blemishine.crashWith(myObstacles[i])) {
+	  COUNTER = 1;
+    }
+  }
+  if (COUNTER == 1){
+	  setTimeout(function(cr,){COUNTER = 0},1000);
+	  COUNTER = 2;
+  }
+  myGameArea.clear();
+  myGameArea.frameNo += 1;
+  if (myGameArea.frameNo == 1 || everyinterval(150)) {
+    x = myGameArea.canvas.width;
+    y = myGameArea.canvas.height - 200;
+    myObstacles.push(new component(10, 50, "dark", 448, 120,0,0,0,0, 0, 0));
+	myObstacles.push(new component(10, 50, "dark", 0, 200, 0, 0, 0, 0, 0, 1));
+	myObstacles.push(new component(10, 50, "dark", 0, 160, 0, 0, 0, 0, 0, 2));
+	if(myObstacles.length > 15){
+		for (var spl = 0; spl < 3; spl += 1){
+			myObstacles.splice(0, 1);}
+	}
+ }
+  myGameArea.clear();
+  blemishine.speedX = 0;
+  blemishine.speedY = 0;
+    if(COUNTER != 0){blemishine.speedY = 50;
+		if(blemishine.x > 210){blemishine.speedX = -20}
+		if(blemishine.x < 170){blemishine.speedX = 20}
+	}
+	if(COUNTER == 0){
+  if (myGameArea.keys && (myGameArea.keys[37] || myGameArea.keys[65])) {blemishine.speedX = -4; }
+  if (myGameArea.keys && (myGameArea.keys[39] || myGameArea.keys[68])) {blemishine.speedX = 4; }
+  if (myGameArea.keys && (myGameArea.keys[38] || myGameArea.keys[87])) {blemishine.speedY = -4; }
+  if (myGameArea.keys && (myGameArea.keys[40] || myGameArea.keys[83])) {blemishine.speedY = 4; }
+	}
+  if(blemishine.y <20 && (blemishine.x < 200 && blemishine.x > 150)){score++;COUNTER = 1;blemishine.speedY = 20}
+  blemishine.newPos();
+  Background.update();
+    for (i = 0; i < myObstacles.length; i += 1) {
+		if (myObstacles[i].path == 0){
+			myObstacles[i].x += -1;}
+		if (myObstacles[i].path == 1) 
+			{myObstacles[i].x += 1.2;}
+		if(myObstacles[i].path ==2){
+			if((myObstacles[i].y > 80)){
+				myObstacles[i].x += 1;myObstacles[i].y -=2}
+			else {myObstacles[i].x +=30;}
+		}
+    myObstacles[i].update();
+  }
+myScore.text = "SCORE: " + score;
+  blemishine.update();
+  myScore.update();
+  myBlemiChibi.update();
+	}
+
+
+
+-->
+</html>
