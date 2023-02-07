@@ -56,12 +56,13 @@
 	<div id="RightSideButtons">
 		<button type="button" onclick="resetHope();EnDisM();HopeCheck();TestRest();ResetAB()" style="margin-bottom:12%">reset</button> 
 		<button type="button" onclick="AddIS()" id="ISToggle">Enable IS</button>
-		<td><input type="checkbox" id="ScrollReset"name="ScrollReset" value="All" checked = "checked">Display All Rerolls</td>
+		<td><input type="checkbox" id="ScrollReset"name="ScrollReset" value="All" checked = "checked">Display All Rerolls</td>	
 		<table class="cycle"><tr><td><button type="button" onclick="HopeCycle()">6*</button></td>
 			<td><button type="button" onclick="HopeCycle()">5*</button></td></tr>
 			<tr><td><button type="button" onclick="HopeCycle()">4*</button></td>
 			<td><button type="button" onclick="HopeCycle()">3*</button></td></tr>
 		</table>
+		<tr><td><button type="button" id="toggleSpin"onclick="toggleSpin()">Animations Enabled</button></td></tr>
 		<table>
 			<tr><td> Rerolls: </td><td id ="falsify">0</td></tr>
 			<tr><td id="OperatorsRerolled"></td></tr>
