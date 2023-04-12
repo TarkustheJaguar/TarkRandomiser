@@ -201,8 +201,7 @@ function randVal(){
 		if (cntFR == (hMF)){
 			//Use this to visually change result and unlock roll button, change to classes
 			//Then implement the ability to disable
-			fakeTarget.style = "color: crimson";z.className = EZ + "Roll";	} else {fakeTarget.style = "color: maroon";
-											       document.getElementById("Mbttn").disabled = false;}
+			fakeTarget.style = "color: crimson";z.className = EZ + "Roll"; document.getElementById("Mbttn").disabled = false;} else {fakeTarget.style = "color: maroon";}
 	}
 	if (index != -1){
 		var cc = z.className;
