@@ -200,7 +200,7 @@ function randVal(){
 		if (cntFR == (hMF)){
 			//Use this to visually change result and unlock roll button, change to classes
 			//Then implement the ability to disable
-			fakeTarget.style = "color: crimson";z.className = EZ + "Roll";} else {fakeTarget.style = "color: maroon";}
+			fakeTarget.style = "color: crimson";z.className = EZ + "Roll";document.getElementById("MBttn").disabled = false;} else {fakeTarget.style = "color: maroon";}
 	}
 	if (index != -1){
 		var cc = z.className;
@@ -368,7 +368,7 @@ function HopeCycle(){
 //Cleaned up a lot of the CSS overlap and errors
 //Simplified reroll process to be more efficient
 //Fixed SOME of the issues with regards to other resolutions
-//Added up to Mlynar. Added scrollbar and toggle for resets.
+//Added up to Luo Xiaohei. Added scrollbar and toggle for resets.
 //Fixed 'reset' CSS issue. Reset now properly clears flex direction and scroll. 
 //Need to assign the above line to toggle show all as well!**********
 //Fixed a formatting issue to ensure most recent result is fully visible when 'display all' is false.
@@ -378,6 +378,7 @@ function HopeCycle(){
 //CSS and HTML elements renamed to facilitate reduction from 10 tables to 2.
 //Cleared up reset using a 'for' loop. Currently only 12 operators can be selected.
 //Might be worth shifting all rolled operators into a list similar to reroll list for convenience - depending on 'card' mechanic
-//Implemented randomised 'fake' rolls that display prior to actual result. Intend to lock out reroll and add animation for this.
+//Implemented randomised 'fake' rolls that display prior to actual result.
 //Added ability to disable fake results - will be used to disable ALL animations as they are added.
 //Fake results now function at different 'Hope' values, and can display actual result in fake displays.
+//Implemented lockout to prevent error if mashing 'reroll' button with animations enabled
