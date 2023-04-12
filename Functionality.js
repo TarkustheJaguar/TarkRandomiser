@@ -104,7 +104,7 @@ function HopeCheck() {
 			HT[10] = "Hope10";
 // UNIVERSAL Randomiser. Nested Successfully. 'QQ' returns results in quotations - if statements are workarounds
 function randVal(){
-	if (arcticImplement == 0){document.getElementById("Mbttn").disabled = true;}
+	if (arcticImplement == 0){document.getElementById("MBttn").disabled = true;}
 	var T = parseInt(document.getElementById('number').value, 10);
 	var QQ = document.getElementById("ClassHead").innerText;
 	if (QQ === "Defenders"){var Q = Defender}
@@ -201,7 +201,7 @@ function randVal(){
 		if (cntFR == (hMF)){
 			//Use this to visually change result and unlock roll button, change to classes
 			//Then implement the ability to disable
-			fakeTarget.style = "color: crimson";z.className = EZ + "Roll"; document.getElementById("Mbttn").disabled = false;} else {fakeTarget.style = "color: maroon";}
+			fakeTarget.style = "color: crimson";z.className = EZ + "Roll"; document.getElementById("MBttn").disabled = false;} else {fakeTarget.style = "color: maroon";}
 	}
 	if (index != -1){
 		var cc = z.className;
