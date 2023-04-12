@@ -172,8 +172,7 @@ function randVal(){
 		if ((index3 !== -1) && ((DD!="Reserve Op: Melee")&&(DD!="Reserve Op: Ranged")&&(DD!="Reserve Medic"))&&(Q === (All))){
 				(are)[xt].splice(index3, 1);
 		}
-				
-//The below will be a test of 'fake results' similar to a dice roll. Intend to eventually make like a slot machine	
+					
 //Uses 'arcticImplement' for enable/disable. 0 enable, 5 disable.
 	var hMF = 11; //'How Many Fakes' - should be equal to timings.length
 	if ((arcticImplement != 5) && (((Q).flat()).length >= 1) && ((((Q)[xt].flat()).length) > (0))){
@@ -201,7 +200,7 @@ function randVal(){
 		if (cntFR == (hMF)){
 			//Use this to visually change result and unlock roll button, change to classes
 			//Then implement the ability to disable
-			fakeTarget.style = "color: crimson";z.className = EZ + "Roll"; document.getElementById("MBttn").disabled = false;} else {fakeTarget.style = "color: maroon";}
+			fakeTarget.style = "color: crimson";z.className = EZ + "Roll";} else {fakeTarget.style = "color: maroon";}
 	}
 	if (index != -1){
 		var cc = z.className;
