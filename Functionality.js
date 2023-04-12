@@ -197,10 +197,12 @@ function randVal(){
 		var useFR = arrayfakeres[cntFR];
 		fakeTarget.innerHTML = (useFR);
 		cntFR++;
+		document.getElementById("Mbttn").disabled = true;
 		if (cntFR == (hMF)){
 			//Use this to visually change result and unlock roll button, change to classes
 			//Then implement the ability to disable
-			fakeTarget.style = "color: crimson";z.className = EZ + "Roll";	} else {fakeTarget.style = "color: maroon";}
+			fakeTarget.style = "color: crimson";z.className = EZ + "Roll";	} else {fakeTarget.style = "color: maroon";
+											       document.getElementById("Mbttn").disabled = false;}
 	}
 	if (index != -1){
 		var cc = z.className;
@@ -237,7 +239,7 @@ function TestRest(){
 			Defender[2] = ["Liskarm", "Vulcan", "Aurora", "Nearl", "Asbestos", "Ashlock", "Shalem", "Croissant", "Bison", "Blitz", "Heavyrain", "Hung", "Czerny"];
 			Defender[3] = ["Nian", "Hoshiguma", "Saria", "Mudrock", "Blemishine", "Eunectes"];
 			Guard[0] = ["Castle-3","Melantha", "Popukar", "Midnight"];	
-			Guard[1] = ["Matoimaru", "Cutter", "Conviction", "Estelle", "Utage", "Frostleaf", "Beehunter", "Jackie", "Mousse", "Arene", "Dobermann"];
+			Guard[1] = ["Matoimaru", "Cutter", "Conviction", "Estelle", "Utage", "Frostleaf", "Beehunter", "Jackie", "Mousse", "Arene", "Dobermann", "Luo Xiahei"];
 			Guard[2] = ["Specter", "Broca", "Savage", "La Pluma", "Lappland", "Franka", "Astesia", "Tequila", "Akafuyu", "Bibeak", "Swire", "Whislash", "Indra", "Amiya (G)", "Flint", "Ayerscarpe", "Tachanka", "Flamebringer", "Sideroca"];
 			Guard[3] = ["Blaze", "SilverAsh", "Surtr", "Thorns", "Mountain", "Skadi", "Hellagur", "Ch'en", "Nearl (TRK)", "Pallas","Gavial (I)","Mlynar"];
 			Vanguard[0] = ["Yato", "Fang", "Plume", "Vanilla"];
