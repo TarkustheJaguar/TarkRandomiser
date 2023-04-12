@@ -104,7 +104,7 @@ function HopeCheck() {
 			HT[10] = "Hope10";
 // UNIVERSAL Randomiser. Nested Successfully. 'QQ' returns results in quotations - if statements are workarounds
 function randVal(){
-	if (arcticImplement == 0){document.getElementById("MBttn").disabled = true;}
+	if (arcticImplement != 5){document.getElementById("MBttn").disabled = true;}
 	var T = parseInt(document.getElementById('number').value, 10);
 	var QQ = document.getElementById("ClassHead").innerText;
 	if (QQ === "Defenders"){var Q = Defender}
