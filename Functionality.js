@@ -237,20 +237,20 @@ function TestRest(){
 			Defender[2] = ["Liskarm", "Vulcan", "Aurora", "Nearl", "Asbestos", "Ashlock", "Shalem", "Croissant", "Bison", "Blitz", "Heavyrain", "Hung", "Czerny"];
 			Defender[3] = ["Nian", "Hoshiguma", "Saria", "Mudrock", "Blemishine", "Eunectes"];
 			Guard[0] = ["Castle-3","Melantha", "Popukar", "Midnight"];	
-			Guard[1] = ["Matoimaru", "Cutter", "Conviction", "Estelle", "Utage", "Frostleaf", "Beehunter", "Jackie", "Mousse", "Arene", "Dobermann", "Luo Xiahei"];
-			Guard[2] = ["Specter", "Broca", "Savage", "La Pluma", "Lappland", "Franka", "Astesia", "Tequila", "Akafuyu", "Bibeak", "Swire", "Whislash", "Indra", "Amiya (G)", "Flint", "Ayerscarpe", "Tachanka", "Flamebringer", "Sideroca"];
+			Guard[1] = ["Matoimaru", "Cutter", "Conviction", "Estelle", "Utage", "Frostleaf", "Beehunter","Jackie","Mousse","Arene","Dobermann","Luo Xiahei"];
+			Guard[2] = ["Specter", "Broca", "Savage", "La Pluma","Lappland","Franka","Astesia","Tequila","Akafuyu","Bibeak","Swire","Whislash","Indra","Dagda","Amiya (G)","Flint","Ayerscarpe","Tachanka","Flamebringer","Sideroca"];
 			Guard[3] = ["Blaze", "SilverAsh", "Surtr", "Thorns", "Mountain", "Skadi", "Hellagur", "Ch'en", "Nearl (TRK)", "Pallas","Gavial (I)","Mlynar"];
 			Vanguard[0] = ["Yato", "Fang", "Plume", "Vanilla"];
 			Vanguard[1] = ["Vigna", "Beanstalk", "Scavenger", "Courier", "Myrtle"];
 			Vanguard[2] = ["Grani", "Reed", "Wildmane", "Blacknight", "Texas", "Zima", "Elysium", "Chiave","Cantabile"];
 			Vanguard[3] = ["Bagpipe", "Saileach", "Siege", "Flametail", "Saga"];
 			Sniper[0] = ["'Justice Knight'", "Rangers","Kroos","Adnachiel","Catapult"];
-			Sniper[1] = ["Jessica","Meteor","Vermeil","May","Ambriel","Pinecone","Aciddrop","Shirayuki"];
+			Sniper[1] = ["Jessica","Meteor","Vermeil","May","Ambriel","Pinecone","Aciddrop","Shirayuki","Totter"];
 			Sniper[2] = ["Greyy (LB)","Kroos (KG)","GreyThroat","April","Executor","Platinum","Blue Poison","Sesa","Firewatch","Andreana","Aosta","Provence","Toddifons","Meteorite","Erato"];
 			Sniper[3] = ["Exusiai","Archetto","Ash","W","Fartooth","Ch'en (H)","Schwarz","Rosa","Rosmontis","Fiametta","Pozyomka"];
 			Medic[0] = ["Lancet-2","Hibiscus","Ansel"];
 			Medic[1] = ["Perfumer", "Sussurro", "Myrrh","Purestream","Gavial"];
-			Medic[2] = ["Warfarin","Ptilopsis","Breeze","Ceylon","Tuye","Mulberry","Folinic","Silence","Whisperain","Honeyberry", "Hibiscus (P)"];
+			Medic[2] = ["Warfarin","Ptilopsis","Breeze","Ceylon","Tuye","Mulberry","Folinic","Silence","Whisperain","Honeyberry", "Hibiscus (P)","Paprika"];
 			Medic[3] = ["Kal'tsit","Nightingale","Shining"];
 			Specialist[0] = ["THRM-EX"];
 			Specialist[1] = ["Shaw","Ethan","Jaye","Rope","Gravel"];
@@ -259,7 +259,7 @@ function TestRest(){
 			Supporter[0] = ["Orchid"];
 			Supporter[1] = ["Deepcolor","Podenco","Earthspirit","Roberta"];
 			Supporter[2] = ["Mayer","Scene","Sora","Shamare","Istina","Quercus","Glaucus","Nine-Colored Deer","Pramanix","Tsukinogi","Proviso"];
-			Supporter[3] = ["Angelina","Ling","Skadi (CH)","Suzuran","Magallan","Gnosis"];
+			Supporter[3] = ["Angelina","Ling","Skadi (CH)","Suzuran","Magallan","Gnosis","Stainless"];
 			Caster[0] = ["12F","Durin","Lava","Steward"];
 			Caster[1] = ["Click","Gitano","Haze","Indigo","Greyy","Pudding"];
 			Caster[2] = ["Astgenne","Leizi","Minimalist","Kjera","Skyfire","Iris","Lava (P)","Nightmare","Beeswax","Mint","Tomimi","Corroserum","Leonhardt","Amiya","Absinthe"];
@@ -368,7 +368,7 @@ function HopeCycle(){
 //Cleaned up a lot of the CSS overlap and errors
 //Simplified reroll process to be more efficient
 //Fixed SOME of the issues with regards to other resolutions
-//Added up to Luo Xiaohei. Added scrollbar and toggle for resets.
+//Added up to Stainless. Added scrollbar and toggle for resets.
 //Fixed 'reset' CSS issue. Reset now properly clears flex direction and scroll. 
 //Need to assign the above line to toggle show all as well!**********
 //Fixed a formatting issue to ensure most recent result is fully visible when 'display all' is false.
