@@ -154,6 +154,7 @@ function randVal(){
 		qr.push(DD);
 	}
 	var index = (Q)[xt].indexOf(DD);
+	if (index == -1){return "Out of Operators!"}
 	var index2 = (All)[xt].indexOf(DD);
 	var index3 = (Guard)[xt].indexOf(DD); var are = Guard; var EZ = "Guard";
 		if (index3 === -1){var index3 = (Sniper)[xt].indexOf(DD); var are = Sniper; var EZ = "Sniper"}
