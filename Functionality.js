@@ -154,7 +154,9 @@ function randVal(){
 		qr.push(DD);
 	}
 	var index = (Q)[xt].indexOf(DD);
-	if (index == -1){return "Out of Operators!"}
+	if (index == -1){return "Out of Operators!"} //Does this actually work? Why is it not showing out of operators anymore?
+	//If I feel like testing in the future, look at if the above is necessary
+	//Also look at: Formatting the class marker to have a gap rather than take 100% from top to bototm lmao. Would need to be centered.
 	var index2 = (All)[xt].indexOf(DD);
 	var index3 = (Guard)[xt].indexOf(DD); var are = Guard; var EZ = "Guard";
 		if (index3 === -1){var index3 = (Sniper)[xt].indexOf(DD); var are = Sniper; var EZ = "Sniper"}
@@ -175,6 +177,7 @@ function randVal(){
 		}
 					
 //Uses 'arcticImplement' for enable/disable. 0 enable, 5 disable.
+//Something in here is occassionally bricking it lmao. As in, button FULLY breaks if it happens. Error tied to animations. Ah well, it's a private project
 	var hMF = 11; //'How Many Fakes' - should be equal to timings.length
 	if ((arcticImplement != 5) && (((Q).flat()).length >= 1) && ((((Q)[xt].flat()).length) > (0))){
 		const timings = [20,50,70,100,150,210,280,370,440,580,800];
