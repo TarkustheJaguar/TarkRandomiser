@@ -178,6 +178,7 @@ function randVal(){
 					
 //Uses 'arcticImplement' for enable/disable. 0 enable, 5 disable.
 //Something in here is occassionally bricking it lmao. As in, button FULLY breaks if it happens. Error tied to animations. Ah well, it's a private project
+//Best guess: Something is a 0 that should be a 1. It is DISPLAYING the final result and breaking other buttons, so there's a loose if. Never hits '-1'arr.length?
 	var hMF = 11; //'How Many Fakes' - should be equal to timings.length
 	if ((arcticImplement != 5) && (((Q).flat()).length >= 1) && ((((Q)[xt].flat()).length) > (0))){
 		const timings = [20,50,70,100,150,210,280,370,440,580,800];
