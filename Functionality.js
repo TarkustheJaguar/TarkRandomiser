@@ -260,7 +260,7 @@ function TestRest(){
 			Specialist[0] = ["THRM-EX"];
 			Specialist[1] = ["Shaw","Ethan","Jaye","Rope","Gravel"];
 			Specialist[2] = ["Projekt Red","Enforcer","Kafka","Manticore","Bena","Robin","Kazemaru","Waai Fu","Cliffheart","FEater","Mr. Nothing","Snowsant","Frost","Kirara"];
-			Specialist[3] = ["Weedy","Gladiia","Lee","Phantom","Mizuki","Aak","Dorothy", "Texas (O)"]
+			Specialist[3] = ["Weedy","Gladiia","Lee","Phantom","Mizuki","Aak","Dorothy", "Texas (O)"];
 			Supporter[0] = ["Orchid"];
 			Supporter[1] = ["Deepcolor","Podenco","Earthspirit","Roberta"];
 			Supporter[2] = ["Mayer","Scene","Sora","Shamare","Istina","Quercus","Glaucus","Nine-Colored Deer","Pramanix","Tsukinogi","Proviso"];
@@ -373,7 +373,7 @@ function HopeCycle(){
 //Cleaned up a lot of the CSS overlap and errors
 //Simplified reroll process to be more efficient
 //Fixed SOME of the issues with regards to other resolutions
-//Added up to Stainless. Added scrollbar and toggle for resets.
+//Added up to TexAlter. Added scrollbar and toggle for resets.
 //Fixed 'reset' CSS issue. Reset now properly clears flex direction and scroll. 
 //Need to assign the above line to toggle show all as well!**********
 //Fixed a formatting issue to ensure most recent result is fully visible when 'display all' is false.
