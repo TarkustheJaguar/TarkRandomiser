@@ -242,7 +242,7 @@ function TestRest(){
 			Defender[2] = ["Liskarm", "Vulcan", "Aurora", "Nearl", "Asbestos", "Ashlock", "Shalem", "Croissant", "Bison", "Blitz", "Heavyrain", "Hung", "Czerny"];
 			Defender[3] = ["Nian", "Hoshiguma", "Saria", "Mudrock", "Blemishine", "Eunectes", "Penance"];
 			Guard[0] = ["Castle-3","Melantha", "Popukar", "Midnight"];	
-			Guard[1] = ["Quartz","Matoimaru", "Cutter", "Conviction", "Estelle", "Utage", "Frostleaf", "Beehunter","Jackie","Mousse","Arene","Dobermann","Luo Xiahei"];
+			Guard[1] = ["Quartz","Matoimaru", "Cutter", "Conviction", "Estelle", "Utage", "Frostleaf", "Beehunter","Jackie","Mousse","Arene","Dobermann","Luo Xiaohei"];
 			Guard[2] = ["Highmore","Specter", "Broca", "Savage", "La Pluma","Lappland","Franka","Astesia","Tequila","Akafuyu","Bibeak","Swire","Whislash","Indra","Dagda","Amiya (G)","Flint","Ayerscarpe","Tachanka","Flamebringer","Sideroca"];
 			Guard[3] = ["Blaze", "SilverAsh", "Surtr", "Thorns", "Mountain", "Skadi", "Hellagur", "Ch'en", "Nearl (TRK)", "Pallas","Gavial (I)","Mlynar"];
 			Vanguard[0] = ["Yato", "Fang", "Plume", "Vanilla"];
