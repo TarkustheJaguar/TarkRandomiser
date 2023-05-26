@@ -260,7 +260,7 @@ function TestRest(){
 			Specialist[0] = ["THRM-EX"];
 			Specialist[1] = ["Shaw","Ethan","Jaye","Rope","Gravel"];
 			Specialist[2] = ["Projekt Red","Enforcer","Kafka","Manticore","Bena","Robin","Kazemaru","Waai Fu","Cliffheart","FEater","Mr. Nothing","Snowsant","Frost","Kirara"];
-			Specialist[3] = ["Weedy","Gladiia","Lee","Phantom","Mizuki","Aak","Dorothy", "Texas (O)]
+			Specialist[3] = ["Weedy","Gladiia","Lee","Phantom","Mizuki","Aak","Dorothy", "Texas (O)"]
 			Supporter[0] = ["Orchid"];
 			Supporter[1] = ["Deepcolor","Podenco","Earthspirit","Roberta"];
 			Supporter[2] = ["Mayer","Scene","Sora","Shamare","Istina","Quercus","Glaucus","Nine-Colored Deer","Pramanix","Tsukinogi","Proviso"];
