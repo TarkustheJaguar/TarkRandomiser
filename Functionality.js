@@ -292,7 +292,7 @@ function accept(){
 			rollButton.innerText = "Roll";
 	}
 }
-var arcticImplement = 0; 
+var arcticImplement = 5; 
 //Used to enable/disable animations. Currently only animation is the 'fake results'.
 function toggleSpin(){
 	var togSpin = document.getElementById("toggleSpin");
