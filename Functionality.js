@@ -247,7 +247,7 @@ function TestRest(){
 			Guard[3] = ["Blaze", "SilverAsh", "Surtr", "Thorns", "Mountain", "Skadi", "Hellagur", "Ch'en", "Nearl (TRK)", "Pallas","Gavial (I)","Mlynar"];
 			Vanguard[0] = ["Yato", "Fang", "Plume", "Vanilla"];
 			Vanguard[1] = ["Vigna", "Beanstalk", "Scavenger", "Courier", "Myrtle"];
-			Vanguard[2] = ["Grani", "Reed", "Wildmane", "Blacknight", "Texas", "Zima", "Elysium", "Chiave","Cantabile"];
+			Vanguard[2] = ["Grani", "Reed", "Wildmane", "Blacknight", "Texas", "Zima", "Elysium", "Chiave","Cantabile","Puzzle"];
 			Vanguard[3] = ["Bagpipe", "Saileach", "Siege", "Flametail", "Saga","Vigil"];
 			Sniper[0] = ["'Justice Knight'", "Rangers","Kroos","Adnachiel","Catapult"];
 			Sniper[1] = ["Jessica","Meteor","Vermeil","May","Ambriel","Pinecone","Aciddrop","Shirayuki","Totter"];
@@ -256,7 +256,7 @@ function TestRest(){
 			Medic[0] = ["Lancet-2","Hibiscus","Ansel"];
 			Medic[1] = ["Perfumer", "Sussurro", "Myrrh","Purestream","Gavial"];
 			Medic[2] = ["Warfarin","Ptilopsis","Breeze","Ceylon","Tuye","Mulberry","Folinic","Silence","Whisperain","Honeyberry", "Hibiscus (P)","Paprika"];
-			Medic[3] = ["Kal'tsit","Nightingale","Shining"];
+			Medic[3] = ["Kal'tsit","Nightingale","Shining","Lumen","Reed (FS)"];
 			Specialist[0] = ["THRM-EX"];
 			Specialist[1] = ["Shaw","Ethan","Jaye","Rope","Gravel"];
 			Specialist[2] = ["Projekt Red","Enforcer","Kafka","Manticore","Bena","Robin","Kazemaru","Waai Fu","Cliffheart","FEater","Mr. Nothing","Snowsant","Frost","Kirara"];
@@ -267,7 +267,7 @@ function TestRest(){
 			Supporter[3] = ["Angelina","Ling","Skadi (CH)","Suzuran","Magallan","Gnosis","Stainless"];
 			Caster[0] = ["12F","Durin","Lava","Steward"];
 			Caster[1] = ["Click","Gitano","Haze","Indigo","Greyy","Pudding"];
-			Caster[2] = ["Qanipalaat","Astgenne","Leizi","Minimalist","Kjera","Skyfire","Iris","Lava (P)","Nightmare","Beeswax","Mint","Tomimi","Corroserum","Leonhardt","Amiya","Absinthe"];
+			Caster[2] = ["Harmonie","Qanipalaat","Astgenne","Leizi","Minimalist","Kjera","Skyfire","Iris","Lava (P)","Nightmare","Beeswax","Mint","Tomimi","Corroserum","Leonhardt","Amiya","Absinthe"];
 			Caster[3] = ["Ifrit","Ceobe","Dusk","Mostima","Eyjafjalla","Carnellian","Goldenglow","Passenger", "Ebenholz"];			
 			All[0] = Guard[0].concat(Vanguard[0], Supporter[0], Sniper[0], Caster[0], Specialist[0], Defender[0], Medic[0]);
 			All[1] = Guard[1].concat(Vanguard[1], Supporter[1], Sniper[1], Caster[1], Specialist[1], Defender[1], Medic[1]);
