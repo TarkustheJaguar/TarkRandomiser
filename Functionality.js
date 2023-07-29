@@ -239,19 +239,19 @@ function TestRest(){
 	All.length = 0;
 			Defender[0] = ["Noir Corne", "Beagle", "Cardigan", "Spot"];	
 			Defender[1] = ["Cuora", "Dur-nar", "Bubble", "Gummy", "Matterhorn"];
-			Defender[2] = ["Liskarm", "Vulcan", "Aurora", "Nearl", "Asbestos", "Ashlock", "Shalem", "Croissant", "Bison", "Blitz", "Heavyrain", "Hung", "Czerny"];
+			Defender[2] = ["Firewhistle","Liskarm", "Vulcan", "Aurora", "Nearl", "Asbestos", "Ashlock", "Shalem", "Croissant", "Bison", "Blitz", "Heavyrain", "Hung", "Czerny"];
 			Defender[3] = ["Nian", "Hoshiguma", "Saria", "Mudrock", "Blemishine", "Eunectes", "Penance"];
 			Guard[0] = ["Castle-3","Melantha", "Popukar", "Midnight"];	
 			Guard[1] = ["Quartz","Matoimaru", "Cutter", "Conviction", "Estelle", "Utage", "Frostleaf", "Beehunter","Jackie","Mousse","Arene","Dobermann","Luo Xiaohei"];
 			Guard[2] = ["Highmore","Specter", "Broca", "Savage", "La Pluma","Lappland","Franka","Astesia","Tequila","Akafuyu","Bibeak","Swire","Whislash","Indra","Dagda","Amiya (G)","Flint","Ayerscarpe","Tachanka","Flamebringer","Sideroca"];
-			Guard[3] = ["Blaze", "SilverAsh", "Surtr", "Thorns", "Mountain", "Skadi", "Hellagur", "Ch'en", "Nearl (TRK)", "Pallas","Gavial (I)","Mlynar"];
+			Guard[3] = ["Chong Yue","Blaze", "SilverAsh", "Surtr", "Thorns", "Mountain", "Skadi", "Hellagur", "Ch'en", "Nearl (TRK)", "Pallas","Gavial (I)","Mlynar"];
 			Vanguard[0] = ["Yato", "Fang", "Plume", "Vanilla"];
 			Vanguard[1] = ["Vigna", "Beanstalk", "Scavenger", "Courier", "Myrtle"];
 			Vanguard[2] = ["Grani", "Reed", "Wildmane", "Blacknight", "Texas", "Zima", "Elysium", "Chiave","Cantabile","Puzzle"];
 			Vanguard[3] = ["Bagpipe", "Saileach", "Siege", "Flametail", "Saga","Vigil"];
 			Sniper[0] = ["'Justice Knight'", "Rangers","Kroos","Adnachiel","Catapult"];
 			Sniper[1] = ["Jessica","Meteor","Vermeil","May","Ambriel","Pinecone","Aciddrop","Shirayuki","Totter"];
-			Sniper[2] = ["Lunacub","Greyy (LB)","Kroos (KG)","GreyThroat","April","Executor","Platinum","Blue Poison","Sesa","Firewatch","Andreana","Aosta","Provence","Toddifons","Meteorite","Erato"];
+			Sniper[2] = ["Jieyun","Lunacub","Greyy (LB)","Kroos (KG)","GreyThroat","April","Executor","Platinum","Blue Poison","Sesa","Firewatch","Andreana","Aosta","Provence","Toddifons","Meteorite","Erato"];
 			Sniper[3] = ["Exusiai","Archetto","Ash","W","Fartooth","Ch'en (H)","Schwarz","Rosa","Rosmontis","Fiametta","Pozyomka"];
 			Medic[0] = ["Lancet-2","Hibiscus","Ansel"];
 			Medic[1] = ["Perfumer", "Sussurro", "Myrrh","Purestream","Gavial"];
@@ -268,7 +268,7 @@ function TestRest(){
 			Caster[0] = ["12F","Durin","Lava","Steward"];
 			Caster[1] = ["Click","Gitano","Haze","Indigo","Greyy","Pudding"];
 			Caster[2] = ["Harmonie","Qanipalaat","Astgenne","Leizi","Minimalist","Kjera","Skyfire","Iris","Lava (P)","Nightmare","Beeswax","Mint","Tomimi","Corroserum","Leonhardt","Amiya","Absinthe"];
-			Caster[3] = ["Ifrit","Ceobe","Dusk","Mostima","Eyjafjalla","Carnellian","Goldenglow","Passenger", "Ebenholz"];			
+			Caster[3] = ["Ifrit","Ceobe","Dusk","Mostima","Eyjafjalla","Carnellian","Goldenglow","Passenger", "Ebenholz","Lin"];			
 			All[0] = Guard[0].concat(Vanguard[0], Supporter[0], Sniper[0], Caster[0], Specialist[0], Defender[0], Medic[0]);
 			All[1] = Guard[1].concat(Vanguard[1], Supporter[1], Sniper[1], Caster[1], Specialist[1], Defender[1], Medic[1]);
 			All[2] = Guard[2].concat(Vanguard[2], Supporter[2], Sniper[2], Caster[2], Specialist[2], Defender[2], Medic[2]);
@@ -373,7 +373,7 @@ function HopeCycle(){
 //Cleaned up a lot of the CSS overlap and errors
 //Simplified reroll process to be more efficient
 //Fixed SOME of the issues with regards to other resolutions
-//Added up to TexAlter. Added scrollbar and toggle for resets.
+//Added up to Chong Yue. Added scrollbar and toggle for resets.
 //Fixed 'reset' CSS issue. Reset now properly clears flex direction and scroll. 
 //Need to assign the above line to toggle show all as well!**********
 //Fixed a formatting issue to ensure most recent result is fully visible when 'display all' is false.
@@ -383,7 +383,8 @@ function HopeCycle(){
 //CSS and HTML elements renamed to facilitate reduction from 10 tables to 2.
 //Cleared up reset using a 'for' loop. Currently only 12 operators can be selected.
 //Might be worth shifting all rolled operators into a list similar to reroll list for convenience - depending on 'card' mechanic
-//Implemented randomised 'fake' rolls that display prior to actual result.
+//Implemented randomised 'fake' rolls that display prior to actual result. Currently defaults to disabled as it is partially broken
 //Added ability to disable fake results - will be used to disable ALL animations as they are added.
 //Fake results now function at different 'Hope' values, and can display actual result in fake displays.
 //Implemented lockout to prevent error if mashing 'reroll' button with animations enabled
+//TO DO: Rename ALL variables for clarity of what they do. Try to improve animation to be functional. Simplify if possible.
