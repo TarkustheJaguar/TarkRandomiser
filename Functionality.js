@@ -243,8 +243,8 @@ function TestRest(){
 			Defender[3] = ["Nian", "Hoshiguma", "Saria", "Mudrock", "Blemishine", "Eunectes", "Penance"];
 			Guard[0] = ["Castle-3","Melantha", "Popukar", "Midnight"];	
 			Guard[1] = ["Quartz","Matoimaru", "Cutter", "Conviction", "Estelle", "Utage", "Frostleaf", "Beehunter","Jackie","Mousse","Arene","Dobermann","Luo Xiaohei"];
-			Guard[2] = ["Highmore","Specter", "Broca", "Savage", "La Pluma","Lappland","Franka","Astesia","Tequila","Akafuyu","Bibeak","Swire","Whislash","Indra","Dagda","Amiya (G)","Flint","Ayerscarpe","Tachanka","Flamebringer","Sideroca"];
-			Guard[3] = ["Chong Yue","Blaze", "SilverAsh", "Surtr", "Thorns", "Mountain", "Skadi", "Hellagur", "Ch'en", "Nearl (TRK)", "Pallas","Gavial (I)","Mlynar"];
+			Guard[2] = ["Wind Chimes","Highmore","Specter", "Broca", "Savage", "La Pluma","Lappland","Franka","Astesia","Tequila","Akafuyu","Bibeak","Swire","Whislash","Indra","Dagda","Amiya (G)","Flint","Ayerscarpe","Tachanka","Flamebringer","Sideroca"];
+			Guard[3] = ["Qiubai","Chong Yue","Blaze", "SilverAsh", "Surtr", "Thorns", "Mountain", "Skadi", "Hellagur", "Ch'en", "Nearl (TRK)", "Pallas","Gavial (I)","Mlynar"];
 			Vanguard[0] = ["Yato", "Fang", "Plume", "Vanilla"];
 			Vanguard[1] = ["Vigna", "Beanstalk", "Scavenger", "Courier", "Myrtle"];
 			Vanguard[2] = ["Grani", "Reed", "Wildmane", "Blacknight", "Texas", "Zima", "Elysium", "Chiave","Cantabile","Puzzle"];
