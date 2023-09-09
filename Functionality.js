@@ -239,7 +239,7 @@ function TestRest(){
 	All.length = 0;
 			Defender[0] = ["Noir Corne", "Beagle", "Cardigan", "Spot"];	
 			Defender[1] = ["Cuora", "Dur-nar", "Bubble", "Gummy", "Matterhorn"];
-			Defender[2] = ["Firewhistle","Liskarm", "Vulcan", "Aurora", "Nearl", "Asbestos", "Ashlock", "Shalem", "Croissant", "Bison", "Blitz", "Heavyrain", "Hung", "Czerny"];
+			Defender[2] = ["Noir Corne (RS)","Firewhistle","Liskarm", "Vulcan", "Aurora", "Nearl", "Asbestos", "Ashlock", "Shalem", "Croissant", "Bison", "Blitz", "Heavyrain", "Hung", "Czerny"];
 			Defender[3] = ["Nian", "Hoshiguma", "Saria", "Mudrock", "Blemishine", "Eunectes", "Penance"];
 			Guard[0] = ["Castle-3","Melantha", "Popukar", "Midnight"];	
 			Guard[1] = ["Quartz","Matoimaru", "Cutter", "Conviction", "Estelle", "Utage", "Frostleaf", "Beehunter","Jackie","Mousse","Arene","Dobermann","Luo Xiaohei"];
@@ -249,7 +249,7 @@ function TestRest(){
 			Vanguard[1] = ["Vigna", "Beanstalk", "Scavenger", "Courier", "Myrtle"];
 			Vanguard[2] = ["Grani", "Reed", "Wildmane", "Blacknight", "Texas", "Zima", "Elysium", "Chiave","Cantabile","Puzzle"];
 			Vanguard[3] = ["Bagpipe", "Saileach", "Siege", "Flametail", "Saga","Vigil"];
-			Sniper[0] = ["'Justice Knight'", "Rangers","Kroos","Adnachiel","Catapult"];
+			Sniper[0] = ["Terra Research Commission","'Justice Knight'", "Rangers","Kroos","Adnachiel","Catapult"];
 			Sniper[1] = ["Jessica","Meteor","Vermeil","May","Ambriel","Pinecone","Aciddrop","Shirayuki","Totter"];
 			Sniper[2] = ["Jieyun","Lunacub","Greyy (LB)","Kroos (KG)","GreyThroat","April","Executor","Platinum","Blue Poison","Sesa","Firewatch","Andreana","Aosta","Provence","Toddifons","Meteorite","Erato"];
 			Sniper[3] = ["Exusiai","Archetto","Ash","W","Fartooth","Ch'en (H)","Schwarz","Rosa","Rosmontis","Fiametta","Pozyomka"];
@@ -260,7 +260,7 @@ function TestRest(){
 			Specialist[0] = ["THRM-EX"];
 			Specialist[1] = ["Shaw","Ethan","Jaye","Rope","Gravel"];
 			Specialist[2] = ["Projekt Red","Enforcer","Kafka","Manticore","Bena","Robin","Kazemaru","Waai Fu","Cliffheart","FEater","Mr. Nothing","Snowsant","Frost","Kirara"];
-			Specialist[3] = ["Weedy","Gladiia","Lee","Phantom","Mizuki","Aak","Dorothy", "Texas (O)"];
+			Specialist[3] = ["Weedy","Gladiia","Lee","Phantom","Mizuki","Aak","Dorothy", "Texas (O)", "Yato (KR)"];
 			Supporter[0] = ["Orchid"];
 			Supporter[1] = ["Deepcolor","Podenco","Earthspirit","Roberta"];
 			Supporter[2] = ["Mayer","Scene","Sora","Shamare","Istina","Quercus","Glaucus","Nine-Colored Deer","Pramanix","Tsukinogi","Proviso"];
